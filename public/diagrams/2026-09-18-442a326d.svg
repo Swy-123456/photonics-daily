@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f8f9fa"/>
+  <!-- 脑组织切片 -->
+  <rect x="30" y="60" width="160" height="120" rx="12" fill="#d0e8f2" stroke="#2c7da0" stroke-width="2"/>
+  <text x="110" y="50" text-anchor="middle" font-size="14" fill="#2c7da0">脑组织切片</text>
+  <!-- 激光 -->
+  <line x1="30" y1="30" x2="110" y2="60" stroke="#e63946" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <text x="20" y="25" font-size="12" fill="#e63946">脉冲激光</text>
+  <!-- 离子 -->
+  <circle cx="210" cy="120" r="6" fill="#f4a261"/>
+  <circle cx="230" cy="100" r="6" fill="#f4a261"/>
+  <circle cx="250" cy="140" r="6" fill="#f4a261"/>
+  <text x="230" y="170" text-anchor="middle" font-size="12" fill="#e76f51">药物-蛋白离子</text>
+  <!-- 质谱仪 -->
+  <rect x="300" y="70" width="140" height="100" rx="10" fill="#e9ecef" stroke="#495057" stroke-width="2"/>
+  <text x="370" y="60" text-anchor="middle" font-size="14" fill="#495057">质谱分析器</text>
+  <text x="370" y="110" text-anchor="middle" font-size="12" fill="#495057">按 m/z 分离</text>
+  <text x="370" y="130" text-anchor="middle" font-size="12" fill="#495057">TOF / Orbitrap</text>
+  <!-- 箭头 -->
+  <line x1="260" y1="120" x2="300" y2="120" stroke="#343a40" stroke-width="2" marker-end="url(#arrowBlack)"/>
+  <!-- 数据热图 -->
+  <rect x="480" y="60" width="130" height="120" rx="8" fill="#fff" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="490" y="70" width="30" height="30" fill="#023e8a"/>
+  <rect x="520" y="70" width="30" height="30" fill="#0077b6"/>
+  <rect x="550" y="70" width="30" height="30" fill="#00b4d8"/>
+  <rect x="490" y="100" width="30" height="30" fill="#0077b6"/>
+  <rect x="520" y="100" width="30" height="30" fill="#00b4d8"/>
+  <rect x="550" y="100" width="30" height="30" fill="#90e0ef"/>
+  <rect x="490" y="130" width="30" height="30" fill="#00b4d8"/>
+  <rect x="520" y="130" width="30" height="30" fill="#90e0ef"/>
+  <rect x="550" y="130" width="30" height="30" fill="#caf0f8"/>
+  <text x="545" y="195" text-anchor="middle" font-size="12" fill="#023e8a">结合率热图</text>
+  <text x="545" y="210" text-anchor="middle" font-size="11" fill="#023e8a">深色 = 高结合率</text>
+  <!-- 图例 -->
+  <rect x="30" y="260" width="580" height="80" rx="8" fill="#fff" stroke="#dee2e6"/>
+  <text x="45" y="285" font-size="13" fill="#343a40">图例：</text>
+  <line x1="100" y1="280" x2="130" y2="280" stroke="#e63946" stroke-width="3"/>
+  <text x="135" y="285" font-size="12" fill="#343a40">激光</text>
+  <circle cx="200" cy="280" r="5" fill="#f4a261"/>
+  <text x="210" y="285" font-size="12" fill="#343a40">离子</text>
+  <rect x="270" y="272" width="20" height="15" fill="#023e8a"/>
+  <text x="295" y="285" font-size="12" fill="#343a40">高结合率</text>
+  <rect x="370" y="272" width="20" height="15" fill="#caf0f8"/>
+  <text x="395" y="285" font-size="12" fill="#343a40">低结合率</text>
+  <!-- 定义箭头标记 -->
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e63946"/>
+    </marker>
+    <marker id="arrowBlack" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#343a40"/>
+    </marker>
+  </defs>
+</svg>
