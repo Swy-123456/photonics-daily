@@ -1,0 +1,22 @@
+---
+interface Props {
+  domains: string[]
+}
+
+const { domains } = Astro.props
+---
+
+<div class="flex flex-wrap items-center gap-2" id="filter-bar">
+  <span class="text-sm text-slate-500 mr-1">按应用领域筛选：</span>
+  {
+    domains.map((d) => (
+      <button
+        type="button"
+        data-domain={d}
+        class={`filter-btn${d === '全部' ? ' active' : ''}`}
+      >
+        {d}
+      </button>
+    ))
+  }
+</div>

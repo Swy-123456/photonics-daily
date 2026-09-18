@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#e8f1fa"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#e67e22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="url(#bg)"/>
+  <text x="320" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a3a5c">3D 光子集成多层堆叠示意图</text>
+
+  <!-- 底层 SOI -->
+  <rect x="60" y="250" width="520" height="46" rx="6" fill="#bcd9f2" stroke="#3b78b5" stroke-width="1.5"/>
+  <text x="80" y="278" font-size="13" fill="#1a3a5c">底层：SOI 硅波导（无源路由）</text>
+  <path d="M100,273 C160,240 220,240 280,273" fill="none" stroke="#2c6fb0" stroke-width="3"/>
+  <path d="M320,273 C380,240 440,240 500,273" fill="none" stroke="#2c6fb0" stroke-width="3"/>
+
+  <!-- 中间层 铌酸锂 -->
+  <rect x="60" y="170" width="520" height="46" rx="6" fill="#d9c2f0" stroke="#7b4fb5" stroke-width="1.5"/>
+  <text x="80" y="198" font-size="13" fill="#3b1f6e">中间层：键合铌酸锂薄膜（电光调制）</text>
+  <path d="M120,193 L200,193" stroke="#7b4fb5" stroke-width="3"/>
+  <path d="M220,193 L300,193" stroke="#7b4fb5" stroke-width="3"/>
+  <rect x="330" y="180" width="60" height="26" rx="4" fill="#f0e6ff" stroke="#7b4fb5"/>
+  <text x="360" y="197" text-anchor="middle" font-size="11" fill="#3b1f6e">电极</text>
+
+  <!-- 顶层 探测器 -->
+  <rect x="60" y="90" width="520" height="46" rx="6" fill="#f7d6c2" stroke="#c05a2b" stroke-width="1.5"/>
+  <text x="80" y="118" font-size="13" fill="#7a2e0e">顶层：III-V / Ge 探测器（光电转换）</text>
+  <rect x="380" y="100" width="80" height="26" rx="4" fill="#ffe9dc" stroke="#c05a2b"/>
+  <text x="420" y="117" text-anchor="middle" font-size="11" fill="#7a2e0e">探测器</text>
+
+  <!-- 层间耦合器 左：倏逝波 -->
+  <rect x="150" y="216" width="90" height="34" rx="4" fill="#fff3cd" stroke="#e6a817" stroke-dasharray="4 3"/>
+  <text x="195" y="237" text-anchor="middle" font-size="11" fill="#8a5a00">倏逝波耦合器</text>
+  <path d="M195,250 L195,216" stroke="#e67e22" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M195,170 L195,136" stroke="#e67e22" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 层间耦合器 右：光栅 -->
+  <rect x="400" y="216" width="90" height="34" rx="4" fill="#d4f5e9" stroke="#2e9e7a" stroke-dasharray="4 3"/>
+  <text x="445" y="237" text-anchor="middle" font-size="11" fill="#1a6b52">光栅耦合器</text>
+  <path d="M445,250 L445,216" stroke="#2e9e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M445,170 L445,136" stroke="#2e9e7a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 光路箭头 -->
+  <path d="M100,273 L100,193" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+  <text x="108" y="240" font-size="11" fill="#e67e22">光</text>
+  <path d="M500,273 L500,193" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+  <path d="M420,193 L420,136" stroke="#e67e22" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+
+  <!-- 图例 -->
+  <rect x="470" y="40" width="150" height="70" rx="6" fill="#ffffff" stroke="#cccccc"/>
+  <text x="482" y="58" font-size="11" font-weight="bold" fill="#333">图例</text>
+  <rect x="482" y="66" width="14" height="10" fill="#bcd9f2" stroke="#3b78b5"/>
+  <text x="502" y="75" font-size="10" fill="#333">硅波导层</text>
+  <rect x="482" y="80" width="14" height="10" fill="#d9c2f0" stroke="#7b4fb5"/>
+  <text x="502" y="89" font-size="10" fill="#333">铌酸锂层</text>
+  <rect x="482" y="94" width="14" height="10" fill="#f7d6c2" stroke="#c05a2b"/>
+  <text x="502" y="103" font-size="10" fill="#333">探测器层</text>
+</svg>

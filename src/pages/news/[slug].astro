@@ -1,0 +1,131 @@
+---
+import { getCollection, render } from 'astro:content'
+import 'katex/dist/katex.min.css'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import TagBadge from '../../components/TagBadge.astro'
+import Diagram from '../../components/Diagram.astro'
+import { renderMathInline, renderRichText } from '../../lib/math'
+
+export async function getStaticPaths() {
+  const entries = await getCollection('news')
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const d = entry.data
+const { Content } = await render(entry)
+const date = d.publishedAt.toISOString().slice(0, 10)
+
+const backgroundHtml = d.background ? renderRichText(d.background) : ''
+const mechanismHtml = d.mechanism ? renderRichText(d.mechanism) : ''
+const diagramExplanationHtml = d.diagramExplanation ? renderRichText(d.diagramExplanation) : ''
+const applicationsHtml = d.applications ? renderRichText(d.applications) : ''
+const glossaryItems = (d.glossary ?? []).map((g) => ({
+  term: g.term,
+  html: renderMathInline(g.definition),
+}))
+
+const toc: { id: string; label: string }[] = []
+if (d.background) toc.push({ id: 'background', label: '背景与技术演进' })
+if (d.mechanism) toc.push({ id: 'mechanism', label: '核心物理机制' })
+toc.push({ id: 'diagram', label: '结构图示解读' })
+if (d.applications) toc.push({ id: 'applications', label: '应用场景与工程挑战' })
+if (glossaryItems.length) toc.push({ id: 'glossary', label: '关键术语表' })
+---
+
+<BaseLayout title={`${d.title} · 光子器件每日资讯`}>
+  <div class="max-w-6xl mx-auto px-4 py-10 lg:grid lg:grid-cols-[220px_1fr] lg:gap-10">
+    <!-- 侧边栏目录 -->
+    <aside class="hidden lg:block">
+      <nav class="sticky top-24 text-sm">
+        <p class="font-semibold text-slate-400 uppercase tracking-wide text-xs mb-3">目录</p>
+        <ul class="space-y-1 border-l border-slate-200">
+          {toc.map((item) => (
+            <li>
+              <a
+                href={`#${item.id}`}
+                class="block -ml-px border-l-2 border-transparent pl-3 py-1 text-slate-600 hover:border-indigo-500 hover:text-indigo-600 transition"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- 正文 -->
+    <article class="min-w-0">
+      <div class="flex flex-wrap items-center gap-2 text-sm text-slate-500 mb-3">
+        <span class="font-medium text-indigo-600">{d.category}</span>
+        <span>·</span>
+        <time datetime={date}>{date}</time>
+        <span>·</span>
+        <a
+          href={d.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline hover:text-indigo-600 transition"
+        >
+          来源：{d.sourceName}
+        </a>
+      </div>
+
+      <h1 class="text-3xl font-bold text-slate-900 mb-3">{d.title}</h1>
+
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        {d.tags.map((tag) => <TagBadge tag={tag} />)}
+      </div>
+
+      <p class="text-slate-600 italic border-l-2 border-indigo-300 pl-3 mb-8">{d.summary}</p>
+
+      {d.background && (
+        <section id="background" class="scroll-mt-24 mb-10">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">背景与技术演进</h2>
+          <div class="article-body" set:html={backgroundHtml} />
+        </section>
+      )}
+
+      {d.mechanism && (
+        <section id="mechanism" class="scroll-mt-24 mb-10">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">核心物理机制</h2>
+          <div class="article-body" set:html={mechanismHtml} />
+        </section>
+      )}
+
+      <section id="diagram" class="scroll-mt-24 mb-10">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">结构图示解读</h2>
+        <Diagram src={d.diagram} alt={d.diagramAlt} caption={d.diagramCaption} />
+        {d.diagramExplanation && <div class="article-body" set:html={diagramExplanationHtml} />}
+      </section>
+
+      {d.applications && (
+        <section id="applications" class="scroll-mt-24 mb-10">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">应用场景与工程挑战</h2>
+          <div class="article-body" set:html={applicationsHtml} />
+        </section>
+      )}
+
+      {glossaryItems.length > 0 && (
+        <section id="glossary" class="scroll-mt-24 mb-10">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">关键术语表</h2>
+          <dl class="space-y-3">
+            {glossaryItems.map((g) => (
+              <div class="rounded-lg border border-slate-200 bg-white p-4">
+                <dt class="font-semibold text-slate-900">{g.term}</dt>
+                <dd class="mt-1 text-slate-600 leading-relaxed" set:html={g.html} />
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
+
+      <div class="article-body mt-10 border-t border-slate-200 pt-6">
+        <Content />
+      </div>
+    </article>
+  </div>
+</BaseLayout>

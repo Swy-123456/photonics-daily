@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout title="关于 · 光子器件每日资讯">
+  <div class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-6">关于本站</h1>
+
+    <div class="article-body">
+      <h2>这是什么</h2>
+      <p>
+        一个自动化的光子器件资讯聚合站。每天（北京时间早 7:00）自动抓取光子器件领域的公开内容，
+        整理为包含「原理说明、结构图示、应用场景」的结构化资讯页，并自动构建发布。
+      </p>
+
+      <h2>覆盖的器件类型</h2>
+      <ul>
+        <li>硅光芯片</li>
+        <li>光波导</li>
+        <li>激光器</li>
+        <li>调制器</li>
+        <li>光电探测器</li>
+        <li>光子集成回路</li>
+      </ul>
+
+      <h2>内容来源</h2>
+      <ul>
+        <li>RSS：Nature Photonics、Optics.org、PIC Magazine、AZoOptics 光子学频道</li>
+        <li>学术预印本：arXiv physics.optics</li>
+        <li>行业新闻：主要光子器件公司产品发布页</li>
+      </ul>
+
+      <h2>应用领域标签</h2>
+      <p>光通信、光计算、传感、量子光子学。</p>
+
+      <h2>技术栈</h2>
+      <p>Astro + MDX + Tailwind CSS，全文搜索由 Pagefind 提供，部署于 GitHub Pages。</p>
+    </div>
+  </div>
+</BaseLayout>

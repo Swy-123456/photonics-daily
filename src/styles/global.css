@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+  }
+}
+
+@layer components {
+  /* 应用领域筛选按钮 */
+  .filter-btn {
+    @apply px-4 py-1.5 text-sm rounded-full border font-medium transition
+      bg-white text-slate-600 border-slate-300 cursor-pointer
+      hover:border-indigo-400 hover:text-indigo-600;
+  }
+  .filter-btn.active {
+    @apply bg-slate-900 text-white border-slate-900
+      hover:text-white hover:border-slate-900;
+  }
+
+  /* MDX 文章正文排版 */
+  .article-body h2 {
+    @apply text-xl font-semibold text-slate-900 mt-8 mb-3;
+  }
+  .article-body h3 {
+    @apply text-lg font-semibold text-slate-900 mt-6 mb-2;
+  }
+  .article-body p {
+    @apply text-slate-700 leading-relaxed mb-4;
+  }
+  .article-body ul {
+    @apply list-disc pl-6 mb-4 space-y-1.5 text-slate-700;
+  }
+  .article-body li {
+    @apply leading-relaxed;
+  }
+  .article-body a {
+    @apply text-indigo-600 underline underline-offset-2 hover:text-indigo-700;
+  }
+  .article-body code {
+    @apply bg-slate-100 px-1.5 py-0.5 rounded text-sm text-rose-600;
+  }
+}

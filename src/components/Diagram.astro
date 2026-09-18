@@ -1,0 +1,20 @@
+---
+interface Props {
+  /** 图示文件名（位于 public/diagrams/ 下）或完整 URL */
+  src: string
+  /** 无障碍 alt 文本 */
+  alt: string
+  /** 图注（可选） */
+  caption?: string
+}
+
+const { src, alt, caption } = Astro.props
+const fullSrc = src.startsWith('http') ? src : `${import.meta.env.BASE_URL}diagrams/${src}`
+---
+
+<figure class="my-6">
+  <div class="bg-white rounded-xl border border-slate-200 p-4 flex justify-center">
+    <img src={fullSrc} alt={alt} loading="lazy" class="max-w-full h-auto" />
+  </div>
+  {caption && <figcaption class="mt-2 text-center text-sm text-slate-500">{caption}</figcaption>}
+</figure>

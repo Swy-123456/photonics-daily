@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const isProd = import.meta.env.PROD
+const base = import.meta.env.BASE_URL
+---
+
+<BaseLayout title="全文搜索 · 光子器件每日资讯">
+  <div class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-2">全文搜索</h1>
+    <p class="text-slate-500 mb-6">在全部资讯的标题、原理与正文中检索。</p>
+
+    {
+      isProd ? (
+        <>
+          <div id="search"></div>
+          <link href={`${base}pagefind/pagefind-ui.css`} rel="stylesheet" />
+          <script src={`${base}pagefind/pagefind-ui.js`} is:inline></script>
+          <script is:inline>
+            window.addEventListener('DOMContentLoaded', () => {
+              if (window.PagefindUI) {
+                new window.PagefindUI({
+                  element: '#search',
+                  showSubResults: true,
+                  showImages: false,
+                })
+              }
+            })
+          </script>
+        </>
+      ) : (
+        <div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-600">
+          全文搜索在构建后可用。请先运行
+          <code class="bg-slate-100 px-1.5 py-0.5 rounded mx-1">npm run build</code>
+          再运行
+          <code class="bg-slate-100 px-1.5 py-0.5 rounded mx-1">npm run preview</code>
+          访问 /search。
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>

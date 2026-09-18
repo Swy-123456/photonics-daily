@@ -1,0 +1,53 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = '光子器件每日资讯',
+  description = '每日自动聚合硅光芯片、光波导、激光器、调制器、光电探测器与光子集成回路的前沿进展',
+} = Astro.props
+
+const base = import.meta.env.BASE_URL
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-10 bg-slate-900/95 backdrop-blur border-b border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href={base} class="flex items-center gap-2 text-white font-bold text-lg">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-400 to-cyan-400"></span>
+          光子器件每日资讯
+        </a>
+        <nav class="flex items-center gap-6 text-sm text-slate-300">
+          <a href={base} class="hover:text-white transition">首页</a>
+          <a href={`${base}search`} class="hover:text-white transition">搜索</a>
+          <a href={`${base}about`} class="hover:text-white transition">关于</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="mt-16 border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-500">
+        <p class="font-medium text-slate-600 mb-1">光子器件每日资讯</p>
+        <p>自动聚合 Nature Photonics · Optics.org · PIC Magazine · AZoOptics · arXiv physics.optics 等来源。</p>
+        <p class="mt-2 text-slate-400">本站资讯由自动化管线每日生成，仅供学习参考。</p>
+      </div>
+    </footer>
+  </body>
+</html>

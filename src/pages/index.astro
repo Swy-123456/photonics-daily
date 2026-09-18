@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import NewsCard from '../components/NewsCard.astro'
+import FilterBar from '../components/FilterBar.astro'
+
+const allNews = (await getCollection('news')).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf()
+)
+
+const domains = ['全部', '光通信', '光计算', '传感', '量子光子学']
+---
+
+<BaseLayout title="光子器件每日资讯">
+  <section class="bg-gradient-to-br from-slate-900 to-indigo-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">光子器件每日资讯</h1>
+      <p class="text-slate-300 max-w-2xl">
+        每日自动聚合硅光芯片、光波导、激光器、调制器、光电探测器与光子集成回路的前沿进展，
+        每条资讯附原理说明、结构图示与应用场景。
+      </p>
+      <div class="flex flex-wrap gap-2 mt-5 text-xs">
+        <span class="px-3 py-1 rounded-full bg-white/10">Nature Photonics</span>
+        <span class="px-3 py-1 rounded-full bg-white/10">arXiv physics.optics</span>
+        <span class="px-3 py-1 rounded-full bg-white/10">Optics.org</span>
+        <span class="px-3 py-1 rounded-full bg-white/10">PIC Magazine</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <FilterBar domains={domains} />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+      {allNews.map((entry) => <NewsCard entry={entry} />)}
+    </div>
+
+    <p id="empty-tip" class="hidden text-center text-slate-500 py-12">
+      该领域暂无资讯。
+    </p>
+  </section>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn')
+  const cards = document.querySelectorAll<HTMLElement>('.news-card')
+  const emptyTip = document.getElementById('empty-tip')
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const domain = btn.dataset.domain ?? '全部'
+      buttons.forEach((b) => b.classList.toggle('active', b === btn))
+
+      let visible = 0
+      cards.forEach((card) => {
+        const tags = (card.dataset.tags ?? '').split(',')
+        const show = domain === '全部' || tags.includes(domain)
+        card.classList.toggle('hidden', !show)
+        if (show) visible += 1
+      })
+      if (emptyTip) emptyTip.classList.toggle('hidden', visible > 0)
+    })
+  })
+</script>

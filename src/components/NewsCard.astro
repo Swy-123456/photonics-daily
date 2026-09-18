@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import TagBadge from './TagBadge.astro'
+
+interface Props {
+  entry: CollectionEntry<'news'>
+}
+
+const { entry } = Astro.props
+const { title, publishedAt, category, tags, summary } = entry.data
+const date = publishedAt.toISOString().slice(0, 10)
+const href = `${import.meta.env.BASE_URL}news/${entry.slug}/`
+---
+
+<article
+  class="news-card bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition p-5 flex flex-col gap-3"
+  data-tags={tags.join(',')}
+>
+  <div class="flex items-center gap-2 text-xs text-slate-500">
+    <time datetime={date}>{date}</time>
+    <span class="text-slate-300">·</span>
+    <span class="font-medium text-indigo-600">{category}</span>
+  </div>
+
+  <a href={href}>
+    <h2 class="text-lg font-semibold text-slate-900 leading-snug hover:text-indigo-600 transition line-clamp-2">
+      {title}
+    </h2>
+  </a>
+
+  <p class="text-sm text-slate-600 line-clamp-3">{summary}</p>
+
+  <div class="flex flex-wrap gap-1.5 mt-auto pt-1">
+    {tags.map((tag) => <TagBadge tag={tag} />)}
+  </div>
+</article>
