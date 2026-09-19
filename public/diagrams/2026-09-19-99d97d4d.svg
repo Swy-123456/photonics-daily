@@ -1,0 +1,44 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360' font-family='sans-serif'>
+  <rect width='640' height='360' fill='#f8fafc'/>
+  <text x='320' y='28' text-anchor='middle' font-size='16' font-weight='bold' fill='#0f172a'>SkyWater 量子光子学代工平台示意</text>
+  <!-- 激光输入 -->
+  <rect x='20' y='80' width='70' height='40' rx='6' fill='#dbeafe' stroke='#2563eb'/>
+  <text x='55' y='105' text-anchor='middle' font-size='11' fill='#1e3a8a'>泵浦激光</text>
+  <line x1='90' y1='100' x2='140' y2='100' stroke='#2563eb' stroke-width='2' marker-end='url(#arrowBlue)'/>
+  <!-- 波导与微环 -->
+  <rect x='140' y='85' width='120' height='30' rx='4' fill='#e0f2fe' stroke='#0284c7'/>
+  <text x='200' y='105' text-anchor='middle' font-size='11' fill='#075985'>硅波导</text>
+  <circle cx='300' cy='100' r='26' fill='none' stroke='#7c3aed' stroke-width='3'/>
+  <text x='300' y='104' text-anchor='middle' font-size='10' fill='#5b21b6'>微环</text>
+  <line x1='260' y1='100' x2='274' y2='100' stroke='#2563eb' stroke-width='2'/>
+  <line x1='326' y1='100' x2='360' y2='100' stroke='#2563eb' stroke-width='2' marker-end='url(#arrowBlue)'/>
+  <!-- MZI -->
+  <rect x='360' y='70' width='90' height='60' rx='4' fill='#f0fdf4' stroke='#16a34a'/>
+  <text x='405' y='95' text-anchor='middle' font-size='11' fill='#166534'>MZI 分束</text>
+  <text x='405' y='112' text-anchor='middle' font-size='10' fill='#166534'>Δφ=2πnΔL/λ</text>
+  <line x1='450' y1='100' x2='490' y2='100' stroke='#2563eb' stroke-width='2' marker-end='url(#arrowBlue)'/>
+  <!-- SNSPD -->
+  <rect x='490' y='70' width='110' height='60' rx='6' fill='#ede9fe' stroke='#7c3aed' stroke-width='2'/>
+  <text x='545' y='95' text-anchor='middle' font-size='11' fill='#5b21b6'>SNSPD</text>
+  <text x='545' y='112' text-anchor='middle' font-size='10' fill='#5b21b6'>超导纳米线</text>
+  <!-- 读出 -->
+  <line x1='545' y1='130' x2='545' y2='180' stroke='#ea580c' stroke-width='2' marker-end='url(#arrowOrange)'/>
+  <rect x='470' y='180' width='150' height='50' rx='6' fill='#ffedd5' stroke='#ea580c'/>
+  <text x='545' y='200' text-anchor='middle' font-size='11' fill='#9a3412'>低温读出电路</text>
+  <text x='545' y='216' text-anchor='middle' font-size='10' fill='#9a3412'>脉冲计数 / TDC</text>
+  <!-- 低温恒温器 -->
+  <rect x='20' y='250' width='600' height='70' rx='10' fill='#f1f5f9' stroke='#94a3b8' stroke-dasharray='6 4'/>
+  <text x='320' y='275' text-anchor='middle' font-size='12' fill='#334155'>低温恒温器（1–4 K）</text>
+  <text x='320' y='298' text-anchor='middle' font-size='11' fill='#64748b'>硅光芯片 + 超导探测器共封装</text>
+  <!-- 图例 -->
+  <rect x='20' y='330' width='12' height='12' fill='#2563eb'/>
+  <text x='38' y='341' font-size='10' fill='#1e293b'>光路</text>
+  <rect x='100' y='330' width='12' height='12' fill='#ea580c'/>
+  <text x='118' y='341' font-size='10' fill='#1e293b'>电学读出</text>
+  <rect x='200' y='330' width='12' height='12' fill='#7c3aed'/>
+  <text x='218' y='341' font-size='10' fill='#1e293b'>超导器件</text>
+  <defs>
+    <marker id='arrowBlue' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 Z' fill='#2563eb'/></marker>
+    <marker id='arrowOrange' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 Z' fill='#ea580c'/></marker>
+  </defs>
+</svg>

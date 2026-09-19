@@ -1,0 +1,49 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360' font-family='sans-serif'>
+  <rect width='640' height='360' fill='#f8f9fa'/>
+  <text x='320' y='28' text-anchor='middle' font-size='16' font-weight='bold' fill='#1a1a2e'>CPO晶圆级测试系统示意图</text>
+  <!-- Laser -->
+  <rect x='20' y='140' width='80' height='50' rx='6' fill='#4a90d9' stroke='#2c5f8a' stroke-width='2'/>
+  <text x='60' y='170' text-anchor='middle' font-size='11' fill='white'>可调激光器</text>
+  <!-- Fiber array -->
+  <line x1='100' y1='165' x2='180' y2='120' stroke='#e67e22' stroke-width='3'/>
+  <line x1='100' y1='165' x2='180' y2='140' stroke='#e67e22' stroke-width='3'/>
+  <text x='130' y='130' font-size='10' fill='#e67e22'>光纤阵列</text>
+  <!-- Wafer -->
+  <rect x='180' y='80' width='280' height='200' rx='10' fill='#d5e8d4' stroke='#82b366' stroke-width='2'/>
+  <text x='320' y='105' text-anchor='middle' font-size='12' fill='#2d5a1e'>硅光晶圆</text>
+  <!-- Grating coupler -->
+  <rect x='200' y='115' width='40' height='15' fill='#f39c12' stroke='#d35400' stroke-width='1.5'/>
+  <text x='220' y='112' text-anchor='middle' font-size='9' fill='#d35400'>光栅</text>
+  <!-- Waveguide -->
+  <line x1='240' y1='122' x2='400' y2='122' stroke='#3498db' stroke-width='2' stroke-dasharray='6,3'/>
+  <!-- Micro-ring -->
+  <circle cx='320' cy='122' r='18' fill='none' stroke='#e74c3c' stroke-width='2.5'/>
+  <text x='320' y='155' text-anchor='middle' font-size='9' fill='#e74c3c'>微环调制器</text>
+  <!-- Detector -->
+  <rect x='400' y='112' width='35' height='20' fill='#9b59b6' stroke='#6c3483' stroke-width='1.5'/>
+  <text x='417' y='107' text-anchor='middle' font-size='9' fill='#6c3483'>探测器</text>
+  <!-- Probe card -->
+  <rect x='280' y='200' width='120' height='40' rx='5' fill='#34495e' stroke='#1a252f' stroke-width='2'/>
+  <text x='340' y='225' text-anchor='middle' font-size='11' fill='white'>高速探针卡</text>
+  <line x1='320' y1='200' x2='320' y2='140' stroke='#34495e' stroke-width='2'/>
+  <!-- Temperature stage -->
+  <rect x='180' y='280' width='280' height='30' rx='5' fill='#e74c3c' opacity='0.3' stroke='#c0392b' stroke-width='1.5'/>
+  <text x='320' y='300' text-anchor='middle' font-size='11' fill='#c0392b'>温控台 (TEC)</text>
+  <!-- Output fiber -->
+  <line x1='435' y1='122' x2='520' y2='100' stroke='#e67e22' stroke-width='3'/>
+  <text x='480' y='90' font-size='10' fill='#e67e22'>输出光纤</text>
+  <!-- BER -->
+  <rect x='520' y='80' width='90' height='50' rx='6' fill='#27ae60' stroke='#1e8449' stroke-width='2'/>
+  <text x='565' y='100' text-anchor='middle' font-size='10' fill='white'>误码仪</text>
+  <text x='565' y='118' text-anchor='middle' font-size='10' fill='white'>眼图分析</text>
+  <!-- Legend -->
+  <rect x='20' y='310' width='600' height='40' rx='5' fill='white' stroke='#ccc' stroke-width='1'/>
+  <line x1='40' y1='330' x2='70' y2='330' stroke='#e67e22' stroke-width='3'/>
+  <text x='78' y='334' font-size='10' fill='#333'>光路</text>
+  <line x1='140' y1='330' x2='170' y2='330' stroke='#34495e' stroke-width='2'/>
+  <text x='178' y='334' font-size='10' fill='#333'>电信号</text>
+  <circle cx='260' cy='330' r='6' fill='none' stroke='#e74c3c' stroke-width='2'/>
+  <text x='272' y='334' font-size='10' fill='#333'>微环</text>
+  <rect x='340' y='324' width='16' height='12' fill='#f39c12'/>
+  <text x='362' y='334' font-size='10' fill='#333'>光栅耦合器</text>
+</svg>
