@@ -45,10 +45,21 @@ jobs:
           git add -A
           if git diff --cached --quiet; then
             echo "无内容变更"
-          else
-            git commit -m "chore: 每日资讯更新 $(date -u +%F)"
-            git push
+            exit 0
           fi
+          git commit -m "chore: 每日资讯更新 $(date -u +%F)"
+          # 远端可能在本次 run 执行期间被并发推进（手动推送 / 其它触发），
+          # 直接 push 会因非 fast-forward 被拒。先 rebase 拉平再推，最多重试 5 次。
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push; then
+              echo "推送成功"
+              exit 0
+            fi
+            echo "推送被拒（第 ${attempt} 次），5 秒后重试…"
+            sleep 5
+          done
+          echo "多次重试后仍推送失败"
+          exit 1
 
       - name: 计算部署路径
         run: |
