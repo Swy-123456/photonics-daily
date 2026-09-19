@@ -2,6 +2,7 @@ import { settings } from './config.mjs'
 import { fetchAll } from './fetch.mjs'
 import { loadSeen, filterNew, markSeen, saveSeen } from './dedupe.mjs'
 import { generate } from './generate.mdx.mjs'
+import { captureDiagram } from './capture.mjs'
 
 async function main() {
   const apiKey = process.env.DEEPSEEK_API_KEY
@@ -27,7 +28,8 @@ async function main() {
   let ok = 0
   for (const item of toGenerate) {
     try {
-      await generate(item, apiKey)
+      const captured = await captureDiagram(item)
+      await generate(item, apiKey, captured)
       markSeen(item)
       ok += 1
     } catch (e) {

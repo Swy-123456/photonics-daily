@@ -47,9 +47,11 @@
 
 ## 图示策略
 
-- v1：由模型生成简洁 SVG 示意图（`diagramSvg`），无版权风险、可离线自动化。
-- 后续增强：从原文页面自动截取/下载真实配图（arXiv 可经 ar5iv 提取 Fig），失败再回退自绘；
-  转载时需标注出处与版权说明。
+- 总是由模型生成简洁 SVG 示意图（`diagramSvg`），写入 `public/diagrams/<slug>.svg`，作为
+  「结构示意图」始终展示。
+- 同时尝试抓取原文真实配图：arXiv 经 ar5iv 提取论文第一个 Fig；RSS 抓文章页 `og:image`。
+  抓到后写入 `public/diagrams/<slug>.<ext>`，作为 `figure` 字段与 SVG 并排展示，图注标注
+  「转载自 <来源>，仅作学习说明」。
 
 ## 去重与时效
 

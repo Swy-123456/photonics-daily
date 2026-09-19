@@ -98,6 +98,13 @@ if (glossaryItems.length) toc.push({ id: 'glossary', label: '关键术语表' })
 
       <section id="diagram" class="scroll-mt-24 mb-10">
         <h2 class="text-2xl font-bold text-slate-900 mb-4">结构图示解读</h2>
+        {d.figure && (
+          <Diagram
+            src={d.figure}
+            alt={`原文配图：${d.title}（来自 ${d.sourceName}）`}
+            caption={`原文配图（转载自 ${d.sourceName}，仅作学习说明）`}
+          />
+        )}
         <Diagram src={d.diagram} alt={d.diagramAlt} caption={d.diagramCaption} />
         {d.diagramExplanation && <div class="article-body" set:html={diagramExplanationHtml} />}
       </section>

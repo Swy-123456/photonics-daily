@@ -35,6 +35,8 @@ const news = defineCollection({
     diagramCaption: z.string(),
     /** 结构图示逐点解读 */
     diagramExplanation: z.string().optional(),
+    /** 原文真实配图（可选，抓取成功后与自绘 SVG 并排展示） */
+    figure: z.string().optional(),
     /** 应用场景与工程挑战 */
     applications: z.string().optional(),
     /** 关键术语表（专业名词 + 通俗解释） */

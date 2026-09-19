@@ -112,4 +112,4 @@ DEEPSEEK_API_KEY=sk-xxx npm run daily
 **已做简化 / 后续增强：**
 
 - Optics.org 无公开 RSS，已从源列表移除；行业公司产品发布页暂未接入（可作为后续源）。
-- 图示 v1 由模型生成 SVG；真实配图自动截取（arXiv 可经 ar5iv 提取 Fig）为后续增强。
+- 图示：自绘 SVG 始终展示；另尝试抓原文真实配图（arXiv 经 ar5iv 提取 Fig，RSS 抓 og:image），抓到则与 SVG 并排展示。

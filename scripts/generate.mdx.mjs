@@ -1,6 +1,6 @@
 import { writeFileSync, mkdirSync } from 'node:fs'
-import { createHash } from 'node:crypto'
 import { settings, SYSTEM_PROMPT, CATEGORIES, TAGS } from './config.mjs'
+import { slugFromItem } from './lib/slug.mjs'
 
 /** 调用 DeepSeek（OpenAI 兼容 chat/completions） */
 async function callDeepSeek(user, apiKey) {
@@ -35,15 +35,6 @@ function parseJson(text) {
   return JSON.parse(cleaned)
 }
 
-/** 生成稳定、URL 唯一的 slug */
-function slugFromItem(item) {
-  const m = item.url.match(/arxiv\.org\/abs\/([\w.-]+)/)
-  if (m) return m[1].replace(/v\d+$/, '')
-  const date = (item.publishedAt || '').slice(0, 10)
-  const hash = createHash('sha1').update(item.url).digest('hex').slice(0, 8)
-  return `${date}-${hash}`
-}
-
 // ---- YAML / MDX 组装 ----
 function quote(s) {
   return '"' + s.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"'
@@ -70,6 +61,19 @@ function placeholderSvg(title) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img"><rect width="640" height="360" fill="#f8fafc"/><text x="320" y="180" text-anchor="middle" font-size="18" fill="#64748b">${safe}</text></svg>`
 }
 
+/**
+ * 转义正文里会被 MDX 误判为 JSX 标签的 `<`（如 `<2`、`<n`、`<0.5 dB`）。
+ * MDX 会把 `<` 后紧跟字母/数字的内容当 JSX 元素，`<2` 会触发
+ * `Unexpected character '2' before name` 导致构建失败。
+ * 跳过 `$...$`/`$$...$$` 数学公式与行内代码 `` `...` ``，避免误伤。
+ */
+function escapeMdxBody(md) {
+  return md
+    .split(/(\$\$[\s\S]+?\$\$|\$[^$\n]+?\$|`[^`\n]+`)/g)
+    .map((part, i) => (i % 2 === 1 ? part : part.replace(/<(?=[A-Za-z0-9_$])/g, '&lt;')))
+    .join('')
+}
+
 /** 把模型返回的器件类型规整到合法枚举（模糊匹配 + 兜底） */
 function pickCategory(raw) {
   const s = String(raw || '').trim()
@@ -92,8 +96,8 @@ function pickTags(raw) {
   return raw.filter((t) => TAGS.includes(t))
 }
 
-/** 对单条资讯：调模型 → 写 SVG → 组装并写 MDX */
-export async function generate(item, apiKey) {
+/** 对单条资讯：调模型 → （已有真实配图则引用，否则写自绘 SVG）→ 组装并写 MDX */
+export async function generate(item, apiKey, captured = null) {
   const user = [
     '请深度扩写以下资讯：',
     '',
@@ -110,9 +114,9 @@ export async function generate(item, apiKey) {
   const j = parseJson(raw)
 
   const slug = slugFromItem(item)
-  const diagramFile = `${slug}.svg`
 
-  // 写图示（模型生成的 SVG；失败则占位）
+  // 总是生成自绘 SVG 示意图（无论是否抓到真实配图）
+  const diagramFile = `${slug}.svg`
   mkdirSync(settings.diagramsDir, { recursive: true })
   const svg = String(j.diagramSvg || '').trim()
   const validSvg = svg.includes('<svg')
@@ -120,6 +124,9 @@ export async function generate(item, apiKey) {
     `${settings.diagramsDir}/${diagramFile}`,
     validSvg ? svg : placeholderSvg(j.title || item.title)
   )
+  const diagramAlt = j.diagramAlt || j.diagramCaption || String(item.title)
+  const diagramCaption = j.diagramCaption || '结构示意图'
+  const diagramExplanation = j.diagramExplanation
 
   const fields = {
     title: j.title || item.title,
@@ -131,15 +138,16 @@ export async function generate(item, apiKey) {
     background: j.background,
     mechanism: j.mechanism,
     diagram: diagramFile,
-    diagramAlt: j.diagramAlt || j.diagramCaption || String(item.title),
-    diagramCaption: j.diagramCaption || '结构示意图',
-    diagramExplanation: j.diagramExplanation,
+    diagramAlt,
+    diagramCaption,
+    diagramExplanation,
+    figure: captured || undefined,
     applications: j.applications,
     glossary: Array.isArray(j.glossary) ? j.glossary : [],
     tags: pickTags(j.tags),
   }
 
-  const body = String(j.body || '').trim()
+  const body = escapeMdxBody(String(j.body || '').trim())
   const mdx = emitFrontmatter(fields) + body + '\n'
 
   mkdirSync(settings.contentDir, { recursive: true })
