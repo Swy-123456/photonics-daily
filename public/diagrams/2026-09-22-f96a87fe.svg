@@ -1,0 +1,43 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360' font-family='sans-serif'>
+  <rect width='640' height='360' fill='#f8fafc'/>
+  <text x='320' y='28' text-anchor='middle' font-size='16' font-weight='bold' fill='#1e293b'>集成量子光子学芯片示意</text>
+  <!-- pump laser -->
+  <rect x='20' y='150' width='70' height='40' rx='6' fill='#dbeafe' stroke='#2563eb'/>
+  <text x='55' y='175' text-anchor='middle' font-size='12' fill='#1e3a8a'>泵浦激光</text>
+  <!-- waveguide -->
+  <line x1='90' y1='170' x2='160' y2='170' stroke='#2563eb' stroke-width='4'/>
+  <text x='125' y='160' text-anchor='middle' font-size='10' fill='#2563eb'>Si 波导</text>
+  <!-- ring resonator -->
+  <circle cx='200' cy='170' r='30' fill='none' stroke='#7c3aed' stroke-width='4'/>
+  <text x='200' y='175' text-anchor='middle' font-size='11' fill='#5b21b6'>微环</text>
+  <text x='200' y='215' text-anchor='middle' font-size='10' fill='#5b21b6'>四波混频</text>
+  <!-- photon pair arrows -->
+  <line x1='230' y1='155' x2='300' y2='120' stroke='#9333ea' stroke-width='2' stroke-dasharray='5,3'/>
+  <line x1='230' y1='185' x2='300' y2='220' stroke='#9333ea' stroke-width='2' stroke-dasharray='5,3'/>
+  <text x='265' y='110' font-size='10' fill='#9333ea'>信号光子</text>
+  <text x='265' y='240' font-size='10' fill='#9333ea'>闲频光子</text>
+  <!-- MZI network -->
+  <rect x='300' y='90' width='180' height='150' rx='8' fill='#ecfdf5' stroke='#10b981' stroke-dasharray='4,3'/>
+  <text x='390' y='82' text-anchor='middle' font-size='12' fill='#047857'>MZI 干涉网络</text>
+  <line x1='320' y1='120' x2='460' y2='120' stroke='#059669' stroke-width='3'/>
+  <line x1='320' y1='210' x2='460' y2='210' stroke='#059669' stroke-width='3'/>
+  <rect x='360' y='108' width='20' height='24' fill='#a7f3d0' stroke='#059669'/>
+  <rect x='400' y='108' width='20' height='24' fill='#a7f3d0' stroke='#059669'/>
+  <rect x='360' y='198' width='20' height='24' fill='#a7f3d0' stroke='#059669'/>
+  <rect x='400' y='198' width='20' height='24' fill='#a7f3d0' stroke='#059669'/>
+  <text x='390' y='175' text-anchor='middle' font-size='10' fill='#047857'>相位调制 φ</text>
+  <!-- detectors -->
+  <line x1='480' y1='120' x2='540' y2='120' stroke='#059669' stroke-width='3'/>
+  <line x1='480' y1='210' x2='540' y2='210' stroke='#059669' stroke-width='3'/>
+  <rect x='540' y='100' width='70' height='40' rx='6' fill='#fef3c7' stroke='#d97706'/>
+  <text x='575' y='125' text-anchor='middle' font-size='11' fill='#92400e'>探测器 1</text>
+  <rect x='540' y='190' width='70' height='40' rx='6' fill='#fef3c7' stroke='#d97706'/>
+  <text x='575' y='215' text-anchor='middle' font-size='11' fill='#92400e'>探测器 2</text>
+  <!-- legend -->
+  <line x1='30' y1='320' x2='70' y2='320' stroke='#2563eb' stroke-width='3'/>
+  <text x='78' y='324' font-size='11' fill='#334155'>经典光路</text>
+  <line x1='170' y1='320' x2='210' y2='320' stroke='#9333ea' stroke-width='2' stroke-dasharray='5,3'/>
+  <text x='218' y='324' font-size='11' fill='#334155'>量子光路</text>
+  <rect x='310' y='310' width='20' height='16' fill='#a7f3d0' stroke='#059669'/>
+  <text x='338' y='324' font-size='11' fill='#334155'>相位调制器</text>
+</svg>

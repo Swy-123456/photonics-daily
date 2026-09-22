@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#f7f9fc"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a2b4a">2nm 电芯片 + 硅光引擎 共封装光互连</text>
+
+  <rect x="30" y="70" width="150" height="220" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="105" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">2nm CMOS 电芯片</text>
+  <text x="105" y="125" text-anchor="middle" font-size="11" fill="#1e3a8a">SerDes</text>
+  <text x="105" y="150" text-anchor="middle" font-size="11" fill="#1e3a8a">调制器驱动</text>
+  <text x="105" y="175" text-anchor="middle" font-size="11" fill="#1e3a8a">DSP 均衡</text>
+  <text x="105" y="200" text-anchor="middle" font-size="11" fill="#1e3a8a">TIA / 接收</text>
+  <text x="105" y="235" text-anchor="middle" font-size="10" fill="#64748b">低功耗 · 高密度</text>
+
+  <rect x="230" y="70" width="170" height="220" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="315" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#14532d">硅光引擎</text>
+  <rect x="250" y="110" width="130" height="30" rx="6" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="315" y="130" text-anchor="middle" font-size="11" fill="#14532d">激光器 (CW)</text>
+  <rect x="250" y="150" width="130" height="30" rx="6" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="315" y="170" text-anchor="middle" font-size="11" fill="#14532d">MZM / 微环调制</text>
+  <rect x="250" y="190" width="130" height="30" rx="6" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="315" y="210" text-anchor="middle" font-size="11" fill="#14532d">波分复用器</text>
+  <rect x="250" y="230" width="130" height="30" rx="6" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="315" y="250" text-anchor="middle" font-size="11" fill="#14532d">光电探测器</text>
+
+  <rect x="460" y="70" width="150" height="220" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="535" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#78350f">光纤链路 / 对端</text>
+  <line x1="480" y1="140" x2="590" y2="140" stroke="#d97706" stroke-width="3"/>
+  <text x="535" y="130" text-anchor="middle" font-size="10" fill="#78350f">单模光纤</text>
+  <line x1="480" y1="185" x2="590" y2="185" stroke="#d97706" stroke-width="3" stroke-dasharray="6,4"/>
+  <text x="535" y="175" text-anchor="middle" font-size="10" fill="#78350f">长距离低损耗</text>
+  <text x="535" y="235" text-anchor="middle" font-size="10" fill="#64748b">1.6T / 3.2T</text>
+
+  <line x1="180" y1="180" x2="228" y2="180" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="204" y="172" text-anchor="middle" font-size="10" fill="#333">电→光</text>
+  <line x1="400" y1="180" x2="458" y2="180" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="429" y="172" text-anchor="middle" font-size="10" fill="#333">光→光</text>
+
+  <rect x="30" y="305" width="14" height="14" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="50" y="317" font-size="11" fill="#333">2nm 电芯片</text>
+  <rect x="160" y="305" width="14" height="14" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="180" y="317" font-size="11" fill="#333">硅光引擎</text>
+  <rect x="290" y="305" width="14" height="14" fill="#fef3c7" stroke="#d97706"/>
+  <text x="310" y="317" font-size="11" fill="#333">光纤/对端</text>
+</svg>
