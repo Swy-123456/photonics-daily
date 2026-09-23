@@ -1,0 +1,43 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360' width='640' height='360'>
+  <rect width='640' height='360' fill='#f8fafc'/>
+  <text x='320' y='28' text-anchor='middle' font-size='18' font-weight='bold' fill='#0f172a'>深冷活细胞显微镜光路示意图</text>
+  <!-- Laser -->
+  <rect x='30' y='70' width='80' height='40' rx='8' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/>
+  <text x='70' y='95' text-anchor='middle' font-size='12' fill='#1e3a8a'>激光器</text>
+  <!-- Beam splitter -->
+  <line x1='110' y1='90' x2='170' y2='90' stroke='#ef4444' stroke-width='2'/>
+  <polygon points='170,80 190,90 170,100' fill='#fca5a5' stroke='#dc2626' stroke-width='1.5'/>
+  <text x='180' y='75' text-anchor='middle' font-size='11' fill='#991b1b'>分束</text>
+  <!-- Capture path -->
+  <line x1='190' y1='90' x2='260' y2='90' stroke='#ef4444' stroke-width='2'/>
+  <rect x='260' y='70' width='70' height='40' rx='8' fill='#dcfce7' stroke='#16a34a' stroke-width='2'/>
+  <text x='295' y='95' text-anchor='middle' font-size='12' fill='#166534'>光镊</text>
+  <line x1='330' y1='90' x2='400' y2='90' stroke='#ef4444' stroke-width='2'/>
+  <!-- Objective -->
+  <polygon points='400,70 430,90 400,110' fill='#e0e7ff' stroke='#4f46e5' stroke-width='2'/>
+  <text x='415' y='65' text-anchor='middle' font-size='11' fill='#3730a3'>物镜</text>
+  <!-- Sample -->
+  <rect x='370' y='120' width='90' height='50' rx='6' fill='#fef3c7' stroke='#d97706' stroke-width='2'/>
+  <text x='415' y='150' text-anchor='middle' font-size='12' fill='#92400e'>低温样品台</text>
+  <text x='415' y='165' text-anchor='middle' font-size='10' fill='#92400e'>南极鱼细胞</text>
+  <!-- Adaptive optics -->
+  <rect x='260' y='200' width='90' height='40' rx='8' fill='#f3e8ff' stroke='#9333ea' stroke-width='2'/>
+  <text x='305' y='225' text-anchor='middle' font-size='12' fill='#6b21a8'>可变形镜</text>
+  <line x1='350' y1='220' x2='415' y2='170' stroke='#a855f7' stroke-width='2' stroke-dasharray='5,3'/>
+  <!-- Detector -->
+  <rect x='500' y='200' width='100' height='40' rx='8' fill='#fee2e2' stroke='#dc2626' stroke-width='2'/>
+  <text x='550' y='225' text-anchor='middle' font-size='12' fill='#991b1b'>深冷探测器</text>
+  <line x1='460' y1='145' x2='550' y2='200' stroke='#f87171' stroke-width='2' stroke-dasharray='5,3'/>
+  <!-- Computer -->
+  <rect x='500' y='280' width='100' height='40' rx='8' fill='#e2e8f0' stroke='#475569' stroke-width='2'/>
+  <text x='550' y='305' text-anchor='middle' font-size='12' fill='#1e293b'>计算机</text>
+  <line x1='550' y1='240' x2='550' y2='280' stroke='#475569' stroke-width='2'/>
+  <line x1='500' y1='300' x2='305' y2='240' stroke='#475569' stroke-width='2' stroke-dasharray='5,3'/>
+  <!-- Legend -->
+  <rect x='30' y='280' width='180' height='60' rx='6' fill='#ffffff' stroke='#cbd5e1' stroke-width='1'/>
+  <text x='40' y='298' font-size='11' fill='#0f172a'>图例</text>
+  <line x1='40' y1='312' x2='70' y2='312' stroke='#ef4444' stroke-width='2'/>
+  <text x='75' y='316' font-size='10' fill='#334155'>光路</text>
+  <line x1='40' y1='328' x2='70' y2='328' stroke='#a855f7' stroke-width='2' stroke-dasharray='5,3'/>
+  <text x='75' y='332' font-size='10' fill='#334155'>反馈控制</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="geGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a90d9"/>
+      <stop offset="100%" stop-color="#2c5f8a"/>
+    </linearGradient>
+    <linearGradient id="siGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9d9d9"/>
+      <stop offset="100%" stop-color="#a0a0a0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#f8f9fa"/>
+  <text x="320" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Ge/Si 雪崩光电二极管（APD）结构示意图</text>
+  <!-- 硅衬底 -->
+  <rect x="80" y="220" width="480" height="60" fill="url(#siGrad)" stroke="#666" stroke-width="1.5" rx="4"/>
+  <text x="320" y="255" text-anchor="middle" font-size="14" fill="#333">硅衬底 / 波导</text>
+  <!-- 锗吸收区 -->
+  <rect x="180" y="160" width="160" height="60" fill="url(#geGrad)" stroke="#1a3f5c" stroke-width="1.5" rx="4"/>
+  <text x="260" y="195" text-anchor="middle" font-size="14" fill="#fff">Ge 吸收区</text>
+  <!-- 硅倍增区 -->
+  <rect x="340" y="160" width="120" height="60" fill="#e8b84b" stroke="#b8860b" stroke-width="1.5" rx="4"/>
+  <text x="400" y="195" text-anchor="middle" font-size="14" fill="#333">Si 倍增区</text>
+  <!-- 电极 -->
+  <rect x="120" y="140" width="40" height="20" fill="#c0c0c0" stroke="#666" stroke-width="1" rx="3"/>
+  <text x="140" y="135" text-anchor="middle" font-size="12" fill="#333">电极</text>
+  <rect x="480" y="140" width="40" height="20" fill="#c0c0c0" stroke="#666" stroke-width="1" rx="3"/>
+  <text x="500" y="135" text-anchor="middle" font-size="12" fill="#333">电极</text>
+  <!-- 光输入箭头 -->
+  <line x1="40" y1="190" x2="170" y2="190" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  <text x="100" y="180" text-anchor="middle" font-size="13" fill="#e74c3c">光输入</text>
+  <!-- 电输出箭头 -->
+  <line x1="520" y1="190" x2="600" y2="190" stroke="#27ae60" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+  </defs>
+  <text x="560" y="180" text-anchor="middle" font-size="13" fill="#27ae60">电输出</text>
+  <!-- 载流子运动箭头 -->
+  <line x1="300" y1="190" x2="370" y2="190" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowOrange)"/>
+  <defs>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+    </marker>
+  </defs>
+  <text x="335" y="210" text-anchor="middle" font-size="12" fill="#f39c12">载流子</text>
+  <!-- 图例 -->
+  <rect x="80" y="300" width="480" height="45" fill="#fff" stroke="#ccc" stroke-width="1" rx="5"/>
+  <rect x="100" y="312" width="20" height="12" fill="url(#geGrad)"/>
+  <text x="130" y="323" font-size="12" fill="#333">Ge 吸收区</text>
+  <rect x="220" y="312" width="20" height="12" fill="#e8b84b"/>
+  <text x="250" y="323" font-size="12" fill="#333">Si 倍增区</text>
+  <line x1="340" y1="318" x2="370" y2="318" stroke="#e74c3c" stroke-width="2"/>
+  <text x="380" y="323" font-size="12" fill="#333">光信号</text>
+  <line x1="450" y1="318" x2="480" y2="318" stroke="#27ae60" stroke-width="2"/>
+  <text x="490" y="323" font-size="12" fill="#333">电信号</text>
+</svg>
