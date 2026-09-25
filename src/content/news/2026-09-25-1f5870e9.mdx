@@ -1,0 +1,49 @@
+---
+title: "SMART Photonics 与 GlobalFoundries 联手：欧洲硅光代工版图重塑"
+sourceName: "PIC Magazine"
+sourceUrl: "https://picmagazine.net/article/125443/SMART_Photonics_and_GF_join_forces"
+publishedAt: "2026-09-25"
+category: "硅光芯片"
+summary: "荷兰 SMART 与 GF 结盟，以 200mm/300mm 硅光代工平台打通欧洲 PIC 量产供应链。"
+background: "硅光子学（Silicon Photonics）自 2000 年代由 Intel、IBM、Kotura 等推动以来，核心命题始终是「用 CMOS 工艺造光器件」。200mm（8 英寸）与 300mm（12 英寸）晶圆产线天然具备高折射率对比（Si/SiO₂ 约 2.0）的绝缘体上硅（SOI）平台，可把波导、调制器、探测器、光栅耦合器单片集成。过去十年，代工格局由 GlobalFoundries（GF Fotonix，300mm）、AIM Photonics、IMEC、Tower Semiconductor 与台积电等主导；而欧洲本土长期缺少能承接中小批量到大规模量产的开放硅光代工。SMART Photonics 是荷兰埃因霍温的纯代工（foundry）厂商，拥有 200mm 硅光产线与 InP 异质集成能力，主打「多项目晶圆（MPW）+ 量产」模式；GF 则握有 300mm 大规模 CMOS 产能与 Fotonix 平台。两者联手，本质是把欧洲的设计生态（设计公司、初创、研究所）与全球化量产能力对接，补上从原型到百万颗芯片的「死亡之谷」。"
+mechanism: |
+  硅光芯片的物理基础是「光在波导中被约束与操控」。以最常见的条形波导为例，单模条件由归一化频率决定：
+  
+  $$V=\frac{2\pi a}{\lambda}\sqrt{n_{core}^2-n_{clad}^2}<2.405$$
+  
+  这里 $a$ 是波导半宽，$\lambda$ 是真空波长，$n_{core}$、$n_{clad}$ 分别是芯层（Si，$n\approx3.48$）与包层（SiO₂，$n\approx1.44$）折射率。通俗地说，波导不能太宽也不能太窄，否则光会「漏出去」或支持多个模式，只有满足上式才像单车道一样只走一束光。
+  
+  光在芯片上的调制靠等离子体色散效应（plasma dispersion effect）：对硅施加电压注入自由载流子，载流子浓度 $N$ 改变折射率与吸收：
+  
+  $$\Delta n = -\frac{e^2\lambda^2}{8\pi^2 c^2 \varepsilon_0 n}\left(\frac{\Delta N_e}{m_e^*}+\frac{\Delta N_h}{m_h^*}\right)$$
+  
+  即载流子越多，折射率越小、吸收越大。马赫-曾德尔调制器（MZM）把相位变化转成强度变化：两臂相位差 $\Delta\phi = \frac{2\pi}{\lambda}\Delta n_{eff} L$，输出功率 $P_{out}=P_{in}\cos^2(\Delta\phi/2)$，实现「电信号写进光里」。
+  
+  探测端则利用光电效应：硅在 1550 nm 几乎透明，故通常外延 Ge 吸收层，光子激发电子-空穴对，在内建电场下形成光电流 $I_{ph}=\frac{q}{h\nu}P_{in}\cdot\eta$，其中 $\eta$ 为量子效率。
+  
+  代工平台的价值在于把这些器件的工艺容差（线宽、掺杂、厚度）标准化。GF Fotonix 在 300mm 上集成调制器、Ge 探测器、TiN 加热器与 CMOS 驱动电路；SMART 的 200mm 平台则以低损耗 SiN/Si 波导与 InP 增益芯片见长。两者结合后，客户可在同一设计流程中按性能/成本选择平台，并用 MPW 共享掩模摊薄流片费用。
+diagram: "2026-09-25-1f5870e9.svg"
+diagramAlt: "左侧为设计公司与研究所，经 MPW 多项目晶圆进入 SMART 200mm 与 GF 300mm 产线，输出调制器、探测器与封装模块。"
+diagramCaption: "图 1  SMART Photonics 与 GlobalFoundries 硅光代工协同示意图：从设计、MPW 流片到 200mm/300mm 量产。"
+diagramExplanation: "图中左侧是设计生态（EDA、IP、初创），中间是两条代工产线：SMART 200mm 侧重 InP 异质集成与快速迭代，GF 300mm 侧重大规模 CMOS 兼容量产。箭头表示 MPW 共享流片到量产爬坡的路径，右侧是调制器、Ge 探测器、光栅耦合器与封装测试模块，底部图例区分材料与工艺节点。"
+applications: "该合作直接服务数据中心光互连（800G/1.6T 可插拔与 CPO）、相干通信、激光雷达（FMCW LiDAR）、量子光子学与生物传感。工程挑战包括：200mm 与 300mm 工艺设计套件（PDK）的统一、跨平台器件模型一致性、光纤-芯片耦合损耗（<1 dB 为目标）、热光调谐功耗（mW 级）、以及从 MPW 到量产的良率与测试成本。"
+glossary: [{"term":"硅光子学","definition":"用硅和 CMOS 工艺在芯片上制造光波导、调制器、探测器等光学器件的技术。"},{"term":"MPW","definition":"多项目晶圆，多个客户共享一张掩模和一次流片，分摊高昂的掩模费用。"},{"term":"PDK","definition":"工艺设计套件，代工厂提供给设计者的器件模型、版图规则与仿真库。"},{"term":"等离子体色散效应","definition":"硅中自由载流子浓度变化引起折射率和吸收改变，是硅调制器的核心机制。"},{"term":"异质集成","definition":"把不同材料（如 InP 激光器）键合或外延到硅平台上，弥补硅不发光的问题。"}]
+tags: ["光通信"]
+---
+## 知识延伸
+
+### 为什么硅光需要「代工」而不是自己建线？
+
+一条 300mm CMOS 产线投资约 100 亿美元量级，硅光器件只是其中一小部分工艺模块。Fabless 设计公司把版图交给代工厂，就像芯片设计公司交给台积电一样，才能把固定成本摊薄到成千上万颗芯片上。
+
+### 200mm 与 300mm 的取舍
+
+300mm 单片可容纳更多芯片、单位成本更低，适合大规模量产；200mm 产线切换快、MPW 周期短，适合原型与小批量。SMART 与 GF 的互补正是「快」与「大」的组合。
+
+### 上下游一览
+
+上游：SOI 晶圆、Ge、InP、TiN、EDA（Synopsys、Luceda）。中游：代工厂与封装（光纤阵列、微透镜）。下游：光模块、CPO、LiDAR、量子密钥分发。
+
+### 与薄膜铌酸锂的竞争
+
+TFLN 调制器带宽可超 100 GHz、损耗低，但缺乏大规模 CMOS 代工生态；硅光胜在集成度与成本。未来两者可能在异质集成中互补。

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f8f9fa"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">C 波段 POLS 架构示意</text>
+  <!-- 光纤输入 -->
+  <line x1="30" y1="180" x2="100" y2="180" stroke="#e07a5f" stroke-width="4"/>
+  <ellipse cx="65" cy="180" rx="14" ry="8" fill="none" stroke="#e07a5f" stroke-width="2"/>
+  <text x="65" y="215" text-anchor="middle" font-size="11" fill="#e07a5f">任意偏振</text>
+  <!-- 移相器1 -->
+  <rect x="100" y="155" width="70" height="50" rx="6" fill="#3d5a80" opacity="0.85"/>
+  <text x="135" y="185" text-anchor="middle" font-size="11" fill="#fff">移相器 1</text>
+  <text x="135" y="220" text-anchor="middle" font-size="10" fill="#3d5a80">Δφ₁</text>
+  <!-- 移相器2 -->
+  <rect x="190" y="155" width="70" height="50" rx="6" fill="#3d5a80" opacity="0.85"/>
+  <text x="225" y="185" text-anchor="middle" font-size="11" fill="#fff">移相器 2</text>
+  <text x="225" y="220" text-anchor="middle" font-size="10" fill="#3d5a80">Δφ₂</text>
+  <!-- 移相器3 -->
+  <rect x="280" y="155" width="70" height="50" rx="6" fill="#3d5a80" opacity="0.85"/>
+  <text x="315" y="185" text-anchor="middle" font-size="11" fill="#fff">移相器 3</text>
+  <text x="315" y="220" text-anchor="middle" font-size="10" fill="#3d5a80">Δφ₃</text>
+  <!-- 连接线 -->
+  <line x1="170" y1="180" x2="190" y2="180" stroke="#3d5a80" stroke-width="3"/>
+  <line x1="260" y1="180" x2="280" y2="180" stroke="#3d5a80" stroke-width="3"/>
+  <!-- PSR -->
+  <rect x="370" y="130" width="80" height="100" rx="6" fill="#81b29a"/>
+  <text x="410" y="175" text-anchor="middle" font-size="12" fill="#fff">PSR</text>
+  <text x="410" y="195" text-anchor="middle" font-size="10" fill="#fff">偏振分束旋转</text>
+  <line x1="350" y1="180" x2="370" y2="180" stroke="#3d5a80" stroke-width="3"/>
+  <!-- 上路输出 -->
+  <line x1="450" y1="155" x2="530" y2="155" stroke="#2a9d8f" stroke-width="3"/>
+  <rect x="530" y="140" width="60" height="30" rx="4" fill="#2a9d8f"/>
+  <text x="560" y="160" text-anchor="middle" font-size="11" fill="#fff">PD 1</text>
+  <text x="490" y="145" text-anchor="middle" font-size="10" fill="#2a9d8f">TE 主路</text>
+  <!-- 下路输出 -->
+  <line x1="450" y1="205" x2="530" y2="205" stroke="#e9c46a" stroke-width="3"/>
+  <rect x="530" y="190" width="60" height="30" rx="4" fill="#e9c46a"/>
+  <text x="560" y="210" text-anchor="middle" font-size="11" fill="#5a4a1a">PD 2</text>
+  <text x="490" y="225" text-anchor="middle" font-size="10" fill="#b08a2e">残余路</text>
+  <!-- 反馈 -->
+  <path d="M560 230 L560 300 L135 300 L135 215" fill="none" stroke="#9b5de5" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="135,215 130,225 140,225" fill="#9b5de5"/>
+  <text x="350" y="320" text-anchor="middle" font-size="11" fill="#9b5de5">控制电路：比较 PD1/PD2 功率，反馈调节 Δφ</text>
+  <!-- 图例 -->
+  <rect x="30" y="260" width="12" height="12" fill="#e07a5f"/>
+  <text x="48" y="270" font-size="11" fill="#333">光纤偏振态</text>
+  <rect x="30" y="280" width="12" height="12" fill="#3d5a80"/>
+  <text x="48" y="290" font-size="11" fill="#333">电光移相器</text>
+  <rect x="30" y="300" width="12" height="12" fill="#81b29a"/>
+  <text x="48" y="310" font-size="11" fill="#333">偏振分束旋转器</text>
+  <rect x="30" y="320" width="12" height="12" fill="#9b5de5"/>
+  <text x="48" y="330" font-size="11" fill="#333">反馈控制</text>
+</svg>
