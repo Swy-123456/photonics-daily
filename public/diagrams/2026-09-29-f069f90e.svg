@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f8f9fa"/>
+  <text x="320" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">激光光谱+AI检测弯曲杆菌系统</text>
+  <!-- 激光器 -->
+  <rect x="30" y="80" width="90" height="50" rx="8" fill="#e63946" opacity="0.85"/>
+  <text x="75" y="110" text-anchor="middle" font-size="12" fill="white">激光器</text>
+  <!-- 光束 -->
+  <line x1="120" y1="105" x2="240" y2="105" stroke="#e63946" stroke-width="3" stroke-dasharray="6,3"/>
+  <text x="180" y="95" text-anchor="middle" font-size="10" fill="#e63946">激发光</text>
+  <!-- 样品 -->
+  <ellipse cx="280" cy="105" rx="45" ry="30" fill="#f4a261" stroke="#e76f51" stroke-width="2"/>
+  <text x="280" y="110" text-anchor="middle" font-size="11" fill="#333">鸡肉/冲洗液</text>
+  <!-- 散射光 -->
+  <line x1="325" y1="105" x2="430" y2="105" stroke="#2a9d8f" stroke-width="3"/>
+  <text x="380" y="95" text-anchor="middle" font-size="10" fill="#2a9d8f">拉曼/荧光</text>
+  <!-- 光谱仪 -->
+  <rect x="430" y="80" width="80" height="50" rx="8" fill="#264653" opacity="0.9"/>
+  <text x="470" y="110" text-anchor="middle" font-size="12" fill="white">光谱仪</text>
+  <!-- 光谱曲线 -->
+  <polyline points="440,150 460,150 470,130 480,150 500,150 510,120 520,150 540,150" fill="none" stroke="#2a9d8f" stroke-width="2"/>
+  <text x="490" y="170" text-anchor="middle" font-size="10" fill="#2a9d8f">光谱数据</text>
+  <!-- AI模块 -->
+  <rect x="200" y="200" width="240" height="60" rx="10" fill="#457b9d" opacity="0.9"/>
+  <text x="320" y="225" text-anchor="middle" font-size="14" fill="white">AI分类模型</text>
+  <text x="320" y="245" text-anchor="middle" font-size="11" fill="#d4e6f1">CNN / SVM</text>
+  <!-- 箭头 光谱到AI -->
+  <line x1="470" y1="150" x2="470" y2="200" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="470" y1="200" x2="440" y2="200" stroke="#555" stroke-width="2"/>
+  <!-- 结果 -->
+  <rect x="240" y="290" width="160" height="40" rx="8" fill="#e9c46a" stroke="#f4a261" stroke-width="2"/>
+  <text x="320" y="315" text-anchor="middle" font-size="13" fill="#333">阳性/阴性 + 置信度</text>
+  <line x1="320" y1="260" x2="320" y2="290" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 图例 -->
+  <rect x="30" y="280" width="180" height="65" rx="6" fill="white" stroke="#ccc"/>
+  <line x1="40" y1="300" x2="70" y2="300" stroke="#e63946" stroke-width="3" stroke-dasharray="6,3"/>
+  <text x="80" y="304" font-size="10" fill="#333">激光激发</text>
+  <line x1="40" y1="320" x2="70" y2="320" stroke="#2a9d8f" stroke-width="3"/>
+  <text x="80" y="324" font-size="10" fill="#333">信号光</text>
+  <line x1="40" y1="340" x2="70" y2="340" stroke="#555" stroke-width="2"/>
+  <text x="80" y="344" font-size="10" fill="#333">数据流</text>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="#555"/>
+    </marker>
+  </defs>
+</svg>
