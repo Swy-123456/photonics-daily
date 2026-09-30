@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a0d8ef"/>
+      <stop offset="100%" stop-color="#1e90ff"/>
+    </linearGradient>
+    <linearGradient id="cavity" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cccccc"/>
+      <stop offset="100%" stop-color="#888888"/>
+    </linearGradient>
+  </defs>
+  <!-- 液氦容器 -->
+  <rect x="50" y="200" width="300" height="120" fill="url(#liquid)" stroke="#1e90ff" stroke-width="2"/>
+  <text x="200" y="340" text-anchor="middle" fill="#000" font-size="14">液氦</text>
+  <!-- 液氦表面 -->
+  <line x1="50" y1="200" x2="350" y2="200" stroke="#1e90ff" stroke-width="3"/>
+  <!-- 电子 -->
+  <circle cx="200" cy="180" r="8" fill="#ff4500" stroke="#8b0000" stroke-width="2"/>
+  <text x="200" y="165" text-anchor="middle" fill="#8b0000" font-size="14">电子</text>
+  <!-- 镜像电荷 -->
+  <circle cx="200" cy="220" r="6" fill="none" stroke="#ff4500" stroke-width="2" stroke-dasharray="3,3"/>
+  <text x="200" y="240" text-anchor="middle" fill="#ff4500" font-size="12">镜像电荷</text>
+  <!-- 微腔镜面 -->
+  <rect x="80" y="60" width="240" height="15" fill="url(#cavity)" stroke="#555" stroke-width="2"/>
+  <rect x="80" y="140" width="240" height="15" fill="url(#cavity)" stroke="#555" stroke-width="2"/>
+  <text x="200" y="50" text-anchor="middle" fill="#555" font-size="14">太赫兹微腔镜面</text>
+  <!-- 腔模电场 -->
+  <path d="M120 100 Q160 80 200 100 T280 100" fill="none" stroke="#ffaa00" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="280" y="95" fill="#ffaa00" font-size="12">腔模电场</text>
+  <!-- 耦合箭头 -->
+  <path d="M200 130 L200 170" stroke="#ff00ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#ff00ff"/>
+    </marker>
+  </defs>
+  <text x="210" y="155" fill="#ff00ff" font-size="12">强耦合 g</text>
+  <!-- 能级图 -->
+  <rect x="420" y="60" width="180" height="240" fill="#f9f9f9" stroke="#ccc" stroke-width="1"/>
+  <text x="510" y="80" text-anchor="middle" fill="#000" font-size="14">能级分裂</text>
+  <!-- 能级线 -->
+  <line x1="440" y1="140" x2="580" y2="140" stroke="#000" stroke-width="2"/>
+  <text x="590" y="145" fill="#000" font-size="12">腔模</text>
+  <line x1="440" y1="180" x2="580" y2="180" stroke="#000" stroke-width="2"/>
+  <text x="590" y="185" fill="#000" font-size="12">电子</text>
+  <!-- 极化激元 -->
+  <line x1="440" y1="110" x2="580" y2="110" stroke="#ff00ff" stroke-width="2"/>
+  <text x="590" y="115" fill="#ff00ff" font-size="12">上极化激元</text>
+  <line x1="440" y1="210" x2="580" y2="210" stroke="#ff00ff" stroke-width="2"/>
+  <text x="590" y="215" fill="#ff00ff" font-size="12">下极化激元</text>
+  <path d="M510 140 L510 110" stroke="#ff00ff" stroke-width="1" marker-end="url(#arrow)"/>
+  <path d="M510 180 L510 210" stroke="#ff00ff" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="520" y="125" fill="#ff00ff" font-size="12">2g</text>
+  <!-- 图例 -->
+  <rect x="420" y="280" width="180" height="60" fill="#fff" stroke="#ccc"/>
+  <circle cx="435" cy="295" r="5" fill="#ff4500"/>
+  <text x="445" y="300" fill="#000" font-size="12">电子</text>
+  <line x1="430" y1="315" x2="450" y2="315" stroke="#ffaa00" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="455" y="320" fill="#000" font-size="12">腔模电场</text>
+  <line x1="430" y1="335" x2="450" y2="335" stroke="#ff00ff" stroke-width="2"/>
+  <text x="455" y="340" fill="#000" font-size="12">极化激元</text>
+</svg>

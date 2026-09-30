@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f7f9fc"/>
+  <text x="320" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a2b4c">SHINE 极端光子学平台示意</text>
+  <!-- 激光输入 -->
+  <rect x="30" y="150" width="70" height="50" rx="8" fill="#4a90d9"/>
+  <text x="65" y="180" text-anchor="middle" font-size="12" fill="#fff">泵浦激光</text>
+  <!-- 波导 -->
+  <line x1="100" y1="175" x2="200" y2="175" stroke="#4a90d9" stroke-width="4"/>
+  <!-- 微环 -->
+  <circle cx="250" cy="175" r="45" fill="none" stroke="#e67e22" stroke-width="5"/>
+  <text x="250" y="130" text-anchor="middle" font-size="12" fill="#e67e22">微环谐振器</text>
+  <text x="250" y="230" text-anchor="middle" font-size="11" fill="#e67e22">四波混频</text>
+  <!-- 分束 -->
+  <line x1="295" y1="175" x2="360" y2="175" stroke="#4a90d9" stroke-width="4"/>
+  <line x1="360" y1="175" x2="360" y2="100" stroke="#4a90d9" stroke-width="4"/>
+  <line x1="360" y1="175" x2="360" y2="250" stroke="#4a90d9" stroke-width="4"/>
+  <!-- SNSPD -->
+  <rect x="420" y="75" width="120" height="50" rx="8" fill="#27ae60"/>
+  <text x="480" y="105" text-anchor="middle" font-size="12" fill="#fff">SNSPD 单光子探测</text>
+  <line x1="360" y1="100" x2="420" y2="100" stroke="#4a90d9" stroke-width="4"/>
+  <!-- MZI -->
+  <rect x="420" y="225" width="120" height="50" rx="8" fill="#8e44ad"/>
+  <text x="480" y="255" text-anchor="middle" font-size="12" fill="#fff">MZI 调制输出</text>
+  <line x1="360" y1="250" x2="420" y2="250" stroke="#4a90d9" stroke-width="4"/>
+  <!-- 图例 -->
+  <rect x="30" y="300" width="580" height="45" rx="6" fill="#eef2f7"/>
+  <circle cx="60" cy="322" r="7" fill="#4a90d9"/>
+  <text x="75" y="327" font-size="12" fill="#1a2b4c">光波导/激光</text>
+  <circle cx="200" cy="322" r="7" fill="#e67e22"/>
+  <text x="215" y="327" font-size="12" fill="#1a2b4c">非线性谐振</text>
+  <circle cx="340" cy="322" r="7" fill="#27ae60"/>
+  <text x="355" y="327" font-size="12" fill="#1a2b4c">单光子探测</text>
+  <circle cx="480" cy="322" r="7" fill="#8e44ad"/>
+  <text x="495" y="327" font-size="12" fill="#1a2b4c">调制/干涉</text>
+</svg>

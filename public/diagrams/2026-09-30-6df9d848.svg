@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#f9f9f9" stroke="#ccc"/>
+  <!-- 微环 -->
+  <circle cx="320" cy="180" r="70" fill="none" stroke="#1f77b4" stroke-width="8" opacity="0.7"/>
+  <!-- 量子点 -->
+  <circle cx="250" cy="180" r="8" fill="#d62728"/>
+  <text x="220" y="170" font-size="14" fill="#d62728">量子点</text>
+  <!-- 光子 -->
+  <path d="M260,180 Q280,160 300,180 Q320,200 340,180 Q360,160 380,180" fill="none" stroke="#ff7f0e" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="300" y="150" font-size="14" fill="#ff7f0e">光子</text>
+  <!-- 调谐电极 -->
+  <rect x="290" y="260" width="60" height="20" fill="#7f7f7f" rx="5"/>
+  <text x="280" y="295" font-size="14" fill="#7f7f7f">调谐电极</text>
+  <!-- 控制信号 -->
+  <line x1="320" y1="280" x2="320" y2="320" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="330" y="330" font-size="14" fill="#333">控制信号</text>
+  <!-- 输出波导 -->
+  <line x1="390" y1="180" x2="520" y2="180" stroke="#2ca02c" stroke-width="6" opacity="0.7"/>
+  <text x="450" y="170" font-size="14" fill="#2ca02c">输出波导</text>
+  <!-- 探测器 -->
+  <rect x="530" y="160" width="40" height="40" fill="#98df8a" stroke="#2ca02c" stroke-width="2" rx="5"/>
+  <text x="525" y="150" font-size="14" fill="#2ca02c">探测器</text>
+  <!-- 图例 -->
+  <rect x="20" y="20" width="180" height="100" fill="#fff" stroke="#ccc" rx="5"/>
+  <text x="30" y="40" font-size="14" fill="#333">图例</text>
+  <circle cx="40" cy="60" r="6" fill="#d62728"/>
+  <text x="55" y="65" font-size="12" fill="#333">量子点</text>
+  <circle cx="40" cy="80" r="6" fill="#1f77b4"/>
+  <text x="55" y="85" font-size="12" fill="#333">微环谐振器</text>
+  <line x1="35" y1="100" x2="45" y2="100" stroke="#ff7f0e" stroke-width="3"/>
+  <text x="55" y="105" font-size="12" fill="#333">光子</text>
+</svg>

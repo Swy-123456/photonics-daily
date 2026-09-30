@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="640" height="360" fill="#f9f9f9" stroke="#ccc"/>
+  <!-- 光源 -->
+  <rect x="20" y="150" width="60" height="40" rx="6" fill="#ffd966" stroke="#b8860b"/>
+  <text x="50" y="175" text-anchor="middle" font-size="12" fill="#333">光源</text>
+  <!-- 分束器 -->
+  <polygon points="120,140 150,170 120,200 90,170" fill="#a4c2f4" stroke="#3c78d8"/>
+  <text x="120" y="175" text-anchor="middle" font-size="11" fill="#333">分束</text>
+  <!-- 箭头：光源到分束器 -->
+  <line x1="80" y1="170" x2="88" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 传感器1 -->
+  <rect x="200" y="60" width="70" height="40" rx="6" fill="#9fc5e8" stroke="#3c78d8"/>
+  <text x="235" y="85" text-anchor="middle" font-size="11" fill="#333">传感器1</text>
+  <!-- 传感器2 -->
+  <rect x="200" y="150" width="70" height="40" rx="6" fill="#9fc5e8" stroke="#3c78d8"/>
+  <text x="235" y="175" text-anchor="middle" font-size="11" fill="#333">传感器2</text>
+  <!-- 传感器3 -->
+  <rect x="200" y="240" width="70" height="40" rx="6" fill="#9fc5e8" stroke="#3c78d8"/>
+  <text x="235" y="265" text-anchor="middle" font-size="11" fill="#333">传感器3</text>
+  <!-- 分束到传感器箭头 -->
+  <line x1="150" y1="170" x2="198" y2="80" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="150" y1="170" x2="198" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="150" y1="170" x2="198" y2="260" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- 噪声符号 -->
+  <text x="280" y="75" font-size="10" fill="#cc0000">+n₁</text>
+  <text x="280" y="165" font-size="10" fill="#cc0000">+n₂</text>
+  <text x="280" y="255" font-size="10" fill="#cc0000">+n₃</text>
+  <!-- 融合中心 -->
+  <rect x="380" y="130" width="100" height="80" rx="10" fill="#d9ead3" stroke="#6aa84f"/>
+  <text x="430" y="165" text-anchor="middle" font-size="12" fill="#333">加权融合</text>
+  <text x="430" y="185" text-anchor="middle" font-size="10" fill="#333">Σ wᵢ yᵢ</text>
+  <!-- 传感器到融合中心箭头 -->
+  <line x1="270" y1="80" x2="378" y2="150" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="270" y1="170" x2="378" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="270" y1="260" x2="378" y2="190" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- 输出 -->
+  <rect x="530" y="150" width="80" height="40" rx="6" fill="#f4cccc" stroke="#cc0000"/>
+  <text x="570" y="175" text-anchor="middle" font-size="12" fill="#333">低噪声输出</text>
+  <line x1="480" y1="170" x2="528" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 图例 -->
+  <rect x="20" y="300" width="12" height="12" fill="#ffd966" stroke="#b8860b"/>
+  <text x="38" y="311" font-size="10" fill="#333">信号源</text>
+  <rect x="100" y="300" width="12" height="12" fill="#9fc5e8" stroke="#3c78d8"/>
+  <text x="118" y="311" font-size="10" fill="#333">传感器</text>
+  <rect x="180" y="300" width="12" height="12" fill="#d9ead3" stroke="#6aa84f"/>
+  <text x="198" y="311" font-size="10" fill="#333">融合算法</text>
+  <rect x="270" y="300" width="12" height="12" fill="#f4cccc" stroke="#cc0000"/>
+  <text x="288" y="311" font-size="10" fill="#333">输出</text>
+</svg>

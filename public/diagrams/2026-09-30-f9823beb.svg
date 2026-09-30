@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f8fafc"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">硅光芯片自动耦合封装流程</text>
+  <!-- fiber array -->
+  <rect x="40" y="120" width="110" height="80" rx="8" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <text x="95" y="150" text-anchor="middle" font-size="12" fill="#1e3a8a">光纤阵列</text>
+  <line x1="60" y1="165" x2="130" y2="165" stroke="#2563eb" stroke-width="2"/>
+  <line x1="60" y1="175" x2="130" y2="175" stroke="#2563eb" stroke-width="2"/>
+  <line x1="60" y1="185" x2="130" y2="185" stroke="#2563eb" stroke-width="2"/>
+  <!-- stage -->
+  <rect x="180" y="100" width="80" height="120" rx="8" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+  <text x="220" y="150" text-anchor="middle" font-size="12" fill="#78350f">六轴</text>
+  <text x="220" y="168" text-anchor="middle" font-size="12" fill="#78350f">位移台</text>
+  <!-- chip -->
+  <rect x="300" y="110" width="160" height="100" rx="8" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="145" text-anchor="middle" font-size="13" fill="#14532d">光子集成回路</text>
+  <text x="380" y="165" text-anchor="middle" font-size="11" fill="#14532d">PIC 芯片</text>
+  <path d="M310 190 L340 190 L360 175 L430 175" stroke="#16a34a" stroke-width="2" fill="none"/>
+  <text x="400" y="200" text-anchor="middle" font-size="10" fill="#14532d">倒锥耦合器</text>
+  <!-- arrow fiber to chip -->
+  <line x1="150" y1="160" x2="300" y2="160" stroke="#64748b" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <!-- power meter -->
+  <rect x="500" y="130" width="90" height="60" rx="8" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+  <text x="545" y="155" text-anchor="middle" font-size="12" fill="#7f1d1d">功率计</text>
+  <text x="545" y="175" text-anchor="middle" font-size="11" fill="#7f1d1d">实时反馈</text>
+  <line x1="460" y1="160" x2="500" y2="160" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow2)"/>
+  <defs>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <!-- feedback -->
+  <path d="M545 190 Q545 250 220 250 Q220 220 220 220" stroke="#dc2626" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow2)"/>
+  <text x="380" y="270" text-anchor="middle" font-size="11" fill="#dc2626">反馈控制位移台搜索最大功率</text>
+  <!-- UV cure -->
+  <rect x="300" y="290" width="160" height="40" rx="8" fill="#e9d5ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="315" text-anchor="middle" font-size="12" fill="#4c1d95">紫外固化 + 晶圆级测试</text>
+  <!-- legend -->
+  <rect x="40" y="300" width="14" height="14" fill="#bfdbfe" stroke="#2563eb"/><text x="60" y="312" font-size="11" fill="#1e293b">光纤</text>
+  <rect x="120" y="300" width="14" height="14" fill="#fde68a" stroke="#d97706"/><text x="140" y="312" font-size="11" fill="#1e293b">位移台</text>
+  <rect x="200" y="300" width="14" height="14" fill="#bbf7d0" stroke="#16a34a"/><text x="220" y="312" font-size="11" fill="#1e293b">PIC</text>
+</svg>
