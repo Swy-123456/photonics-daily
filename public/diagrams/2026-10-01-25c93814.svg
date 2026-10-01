@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f7f9fc"/>
+  <text x="320" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a2a44">罗曼望远镜WFI焦平面精密定位与闭环控制</text>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#3b6ea5"/>
+    </marker>
+  </defs>
+  <!-- Telescope -->
+  <ellipse cx="90" cy="150" rx="48" ry="70" fill="#dce8f7" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="90" y="145" text-anchor="middle" font-size="12" fill="#1a2a44">主镜</text>
+  <text x="90" y="162" text-anchor="middle" font-size="11" fill="#4a6a8a">2.4 m</text>
+  <!-- Light rays -->
+  <line x1="138" y1="120" x2="230" y2="150" stroke="#e8a33d" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="138" y1="180" x2="230" y2="150" stroke="#e8a33d" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="180" y="115" font-size="11" fill="#b07a1e">星光</text>
+  <!-- Focal plane -->
+  <rect x="230" y="110" width="110" height="80" rx="8" fill="#e6f2e6" stroke="#3a8a3a" stroke-width="2"/>
+  <text x="285" y="100" text-anchor="middle" font-size="12" fill="#2a6a2a">WFI焦平面</text>
+  <g fill="#3a8a3a">
+    <rect x="240" y="120" width="18" height="18" rx="2"/>
+    <rect x="264" y="120" width="18" height="18" rx="2"/>
+    <rect x="288" y="120" width="18" height="18" rx="2"/>
+    <rect x="312" y="120" width="18" height="18" rx="2"/>
+    <rect x="240" y="146" width="18" height="18" rx="2"/>
+    <rect x="264" y="146" width="18" height="18" rx="2"/>
+    <rect x="288" y="146" width="18" height="18" rx="2"/>
+    <rect x="312" y="146" width="18" height="18" rx="2"/>
+    <rect x="240" y="172" width="18" height="18" rx="2"/>
+    <rect x="264" y="172" width="18" height="18" rx="2"/>
+    <rect x="288" y="172" width="18" height="18" rx="2"/>
+    <rect x="312" y="172" width="18" height="18" rx="2"/>
+  </g>
+  <text x="285" y="205" text-anchor="middle" font-size="10" fill="#2a6a2a">18×HgCdTe探测器</text>
+  <!-- Piezo stage -->
+  <rect x="370" y="125" width="80" height="50" rx="6" fill="#f7e6d6" stroke="#c47a2a" stroke-width="2"/>
+  <text x="410" y="145" text-anchor="middle" font-size="11" fill="#8a4a10">压电致动器</text>
+  <text x="410" y="162" text-anchor="middle" font-size="10" fill="#8a4a10">+柔性铰链</text>
+  <!-- Sensor -->
+  <rect x="480" y="125" width="70" height="50" rx="6" fill="#e6e6f7" stroke="#5a5ac4" stroke-width="2"/>
+  <text x="515" y="145" text-anchor="middle" font-size="11" fill="#3a3a8a">电容传感器</text>
+  <text x="515" y="162" text-anchor="middle" font-size="10" fill="#3a3a8a">纳米分辨率</text>
+  <!-- Controller -->
+  <rect x="480" y="230" width="100" height="50" rx="6" fill="#f7d6e6" stroke="#c43a8a" stroke-width="2"/>
+  <text x="530" y="250" text-anchor="middle" font-size="11" fill="#8a2a5a">PID控制器</text>
+  <text x="530" y="267" text-anchor="middle" font-size="10" fill="#8a2a5a">Kp, Ki, Kd</text>
+  <!-- Arrows -->
+  <line x1="340" y1="150" x2="368" y2="150" stroke="#3b6ea5" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="150" x2="478" y2="150" stroke="#3b6ea5" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="515" y1="175" x2="515" y2="228" stroke="#3b6ea5" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="255" x2="412" y2="255" stroke="#c43a8a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="410" y1="255" x2="410" y2="177" stroke="#c43a8a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="455" y="245" font-size="10" fill="#8a2a5a">反馈</text>
+  <text x="420" y="275" font-size="10" fill="#8a2a5a">驱动</text>
+  <!-- Labels -->
+  <rect x="30" y="290" width="580" height="50" rx="8" fill="#eef3fa" stroke="#b0c4de"/>
+  <text x="45" y="312" font-size="11" fill="#1a2a44">工作温度：约100 K（降低HgCdTe暗电流）  |  定位精度：纳米级  |  行程：毫米级粗定位+微米级精调</text>
+  <text x="45" y="330" font-size="11" fill="#1a2a44">闭环：电容传感→PID→压电驱动→柔性铰链→探测器位置</text>
+  <!-- Legend -->
+  <rect x="30" y="60" width="12" height="12" fill="#e8a33d"/>
+  <text x="48" y="70" font-size="10" fill="#1a2a44">光路</text>
+  <rect x="30" y="80" width="12" height="12" fill="#3a8a3a"/>
+  <text x="48" y="90" font-size="10" fill="#1a2a44">探测器</text>
+  <rect x="30" y="100" width="12" height="12" fill="#c47a2a"/>
+  <text x="48" y="110" font-size="10" fill="#1a2a44">压电执行</text>
+</svg>
