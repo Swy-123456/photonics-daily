@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1f77b4"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d62728"/>
+    </marker>
+  </defs>
+  <!-- 背景 -->
+  <rect x="0" y="0" width="640" height="360" fill="#f7f9fc" stroke="#cccccc"/>
+  <!-- 地面站 -->
+  <rect x="30" y="250" width="120" height="70" rx="8" fill="#e0e0e0" stroke="#666666"/>
+  <text x="90" y="275" text-anchor="middle" font-size="14" fill="#333">地面站</text>
+  <text x="90" y="295" text-anchor="middle" font-size="11" fill="#555">激光发射器</text>
+  <text x="90" y="310" text-anchor="middle" font-size="11" fill="#555">接收望远镜</text>
+  <!-- 卫星 -->
+  <rect x="280" y="80" width="100" height="60" rx="8" fill="#d0e0ff" stroke="#3366cc"/>
+  <text x="330" y="105" text-anchor="middle" font-size="14" fill="#333">卫星</text>
+  <text x="330" y="125" text-anchor="middle" font-size="11" fill="#555">L 形 CCR 阵列</text>
+  <!-- L 形 CCR 阵列 -->
+  <circle cx="295" cy="130" r="4" fill="#ffcc00" stroke="#cc9900"/>
+  <circle cx="315" cy="130" r="4" fill="#ffcc00" stroke="#cc9900"/>
+  <circle cx="295" cy="110" r="4" fill="#ffcc00" stroke="#cc9900"/>
+  <line x1="295" y1="130" x2="315" y2="130" stroke="#cc9900" stroke-width="2"/>
+  <line x1="295" y1="130" x2="295" y2="110" stroke="#cc9900" stroke-width="2"/>
+  <!-- 发射激光 -->
+  <line x1="120" y1="260" x2="290" y2="140" stroke="#1f77b4" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowBlue)"/>
+  <text x="180" y="210" font-size="12" fill="#1f77b4">发射激光</text>
+  <!-- 返回光 -->
+  <line x1="300" y1="140" x2="140" y2="265" stroke="#d62728" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="200" y="240" font-size="12" fill="#d62728">返回光</text>
+  <!-- 探测器 -->
+  <rect x="480" y="60" width="120" height="100" rx="8" fill="#fff0e0" stroke="#cc6600"/>
+  <text x="540" y="85" text-anchor="middle" font-size="14" fill="#333">探测器焦面</text>
+  <!-- 光斑 -->
+  <circle cx="510" cy="110" r="6" fill="#33cc33" opacity="0.8"/>
+  <circle cx="540" cy="110" r="6" fill="#33cc33" opacity="0.8"/>
+  <circle cx="510" cy="90" r="6" fill="#33cc33" opacity="0.8"/>
+  <line x1="510" y1="110" x2="540" y2="110" stroke="#33cc33" stroke-width="1.5"/>
+  <line x1="510" y1="110" x2="510" y2="90" stroke="#33cc33" stroke-width="1.5"/>
+  <text x="540" y="150" text-anchor="middle" font-size="11" fill="#555">光斑图案</text>
+  <!-- 图例 -->
+  <rect x="480" y="250" width="140" height="80" rx="6" fill="#ffffff" stroke="#aaaaaa"/>
+  <text x="490" y="270" font-size="12" fill="#333">图例</text>
+  <line x1="490" y1="285" x2="520" y2="285" stroke="#1f77b4" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="530" y="289" font-size="11" fill="#555">发射激光</text>
+  <line x1="490" y1="305" x2="520" y2="305" stroke="#d62728" stroke-width="2"/>
+  <text x="530" y="309" font-size="11" fill="#555">返回光</text>
+  <circle cx="500" cy="320" r="4" fill="#ffcc00" stroke="#cc9900"/>
+  <text x="530" y="324" font-size="11" fill="#555">角锥反射器</text>
+</svg>
