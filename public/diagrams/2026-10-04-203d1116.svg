@@ -1,0 +1,60 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360' font-family='sans-serif'>
+  <rect x='0' y='0' width='640' height='360' fill='#f8f9fa'/>
+  <!-- 光子芯片 -->
+  <rect x='80' y='140' width='200' height='80' rx='8' fill='#4a90d9' stroke='#2c5f8a' stroke-width='2'/>
+  <text x='180' y='175' text-anchor='middle' fill='white' font-size='14' font-weight='bold'>光子芯片</text>
+  <text x='180' y='195' text-anchor='middle' fill='#d0e4f5' font-size='11'>波导 / 调制器 / 探测器</text>
+  <!-- 光栅耦合器 -->
+  <rect x='100' y='130' width='40' height='10' fill='#f5a623' stroke='#b87a10' stroke-width='1'/>
+  <rect x='160' y='130' width='40' height='10' fill='#f5a623' stroke='#b87a10' stroke-width='1'/>
+  <rect x='220' y='130' width='40' height='10' fill='#f5a623' stroke='#b87a10' stroke-width='1'/>
+  <text x='180' y='120' text-anchor='middle' fill='#b87a10' font-size='11'>光栅耦合器</text>
+  <!-- 光纤阵列 -->
+  <rect x='100' y='60' width='160' height='40' rx='6' fill='#7ed321' stroke='#4a8a10' stroke-width='2'/>
+  <text x='180' y='85' text-anchor='middle' fill='white' font-size='13' font-weight='bold'>光纤阵列</text>
+  <line x1='120' y1='100' x2='120' y2='130' stroke='#7ed321' stroke-width='2'/>
+  <line x1='180' y1='100' x2='180' y2='130' stroke='#7ed321' stroke-width='2'/>
+  <line x1='240' y1='100' x2='240' y2='130' stroke='#7ed321' stroke-width='2'/>
+  <!-- 位移台 -->
+  <rect x='100' y='30' width='160' height='20' rx='4' fill='#9b9b9b' stroke='#6b6b6b' stroke-width='1'/>
+  <text x='180' y='44' text-anchor='middle' fill='white' font-size='10'>六轴精密位移台</text>
+  <!-- 电探针 -->
+  <rect x='320' y='140' width='60' height='80' rx='6' fill='#e74c3c' stroke='#a93226' stroke-width='2'/>
+  <text x='350' y='175' text-anchor='middle' fill='white' font-size='12' font-weight='bold'>电探针</text>
+  <text x='350' y='195' text-anchor='middle' fill='#f5c6c6' font-size='10'>施加/读取</text>
+  <line x1='280' y1='180' x2='320' y2='180' stroke='#e74c3c' stroke-width='2' stroke-dasharray='4,2'/>
+  <!-- 测试仪器 -->
+  <rect x='430' y='100' width='160' height='120' rx='8' fill='#2c3e50' stroke='#1a252f' stroke-width='2'/>
+  <text x='510' y='130' text-anchor='middle' fill='white' font-size='13' font-weight='bold'>测试仪器</text>
+  <text x='510' y='150' text-anchor='middle' fill='#bdc3c7' font-size='10'>激光源 / 光功率计</text>
+  <text x='510' y='168' text-anchor='middle' fill='#bdc3c7' font-size='10'>误码仪 / 示波器</text>
+  <text x='510' y='186' text-anchor='middle' fill='#bdc3c7' font-size='10'>控制计算机</text>
+  <line x1='380' y1='180' x2='430' y2='180' stroke='#2c3e50' stroke-width='2'/>
+  <!-- 光信号箭头 -->
+  <defs>
+    <marker id='arrowGreen' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'>
+      <path d='M0,0 L8,3 L0,6 Z' fill='#7ed321'/>
+    </marker>
+    <marker id='arrowRed' markerWidth='8' markerHeight='6' refX='8' refY='3' orient='auto'>
+      <path d='M0,0 L8,3 L0,6 Z' fill='#e74c3c'/>
+    </marker>
+  </defs>
+  <line x1='180' y1='105' x2='180' y2='125' stroke='#7ed321' stroke-width='2' marker-end='url(#arrowGreen)'/>
+  <text x='195' y='118' fill='#4a8a10' font-size='9'>光</text>
+  <line x1='300' y1='180' x2='315' y2='180' stroke='#e74c3c' stroke-width='2' marker-end='url(#arrowRed)'/>
+  <text x='305' y='172' fill='#a93226' font-size='9'>电</text>
+  <!-- 图例 -->
+  <rect x='30' y='280' width='580' height='60' rx='6' fill='white' stroke='#ddd' stroke-width='1'/>
+  <rect x='50' y='295' width='16' height='16' fill='#4a90d9'/>
+  <text x='72' y='308' fill='#333' font-size='11'>光子芯片</text>
+  <rect x='160' y='295' width='16' height='16' fill='#7ed321'/>
+  <text x='182' y='308' fill='#333' font-size='11'>光纤阵列</text>
+  <rect x='270' y='295' width='16' height='16' fill='#e74c3c'/>
+  <text x='292' y='308' fill='#333' font-size='11'>电探针</text>
+  <rect x='380' y='295' width='16' height='16' fill='#2c3e50'/>
+  <text x='402' y='308' fill='#333' font-size='11'>测试仪器</text>
+  <line x1='490' y1='303' x2='520' y2='303' stroke='#7ed321' stroke-width='2'/>
+  <text x='525' y='308' fill='#333' font-size='11'>光信号</text>
+  <line x1='490' y1='323' x2='520' y2='323' stroke='#e74c3c' stroke-width='2'/>
+  <text x='525' y='328' fill='#333' font-size='11'>电信号</text>
+</svg>
