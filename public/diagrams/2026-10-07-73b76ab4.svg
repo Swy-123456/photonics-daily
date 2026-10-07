@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f7f9fc"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a2b4a">光子封装：光/电/热三条通路</text>
+  <line x1="40" y1="70" x2="600" y2="70" stroke="#c9d4e4" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="48" y="62" font-size="11" fill="#6b7a90">光通路</text>
+  <rect x="40" y="90" width="70" height="130" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="75" y="145" text-anchor="middle" font-size="11" fill="#1e3a8a">光纤</text>
+  <text x="75" y="162" text-anchor="middle" font-size="10" fill="#1e3a8a">MFD≈10μm</text>
+  <polygon points="110,120 190,100 190,210 110,190" fill="#bfdbfe" stroke="#3b82f6"/>
+  <text x="150" y="150" text-anchor="middle" font-size="10" fill="#1e3a8a">模斑</text>
+  <text x="150" y="165" text-anchor="middle" font-size="10" fill="#1e3a8a">转换器</text>
+  <rect x="190" y="85" width="230" height="140" rx="10" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="305" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#312e81">硅光芯片</text>
+  <circle cx="250" cy="150" r="22" fill="none" stroke="#7c3aed" stroke-width="3"/>
+  <text x="250" y="154" text-anchor="middle" font-size="9" fill="#5b21b6">微环</text>
+  <path d="M300 150 h50 M300 130 h50 M300 170 h50" stroke="#7c3aed" stroke-width="2"/>
+  <text x="370" y="145" font-size="9" fill="#5b21b6">MZM</text>
+  <text x="370" y="160" font-size="9" fill="#5b21b6">调制器</text>
+  <text x="305" y="200" text-anchor="middle" font-size="9" fill="#312e81">波导模场≈0.5μm</text>
+  <rect x="440" y="90" width="160" height="130" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="520" y="120" text-anchor="middle" font-size="11" fill="#14532d">电子驱动芯片</text>
+  <text x="520" y="140" text-anchor="middle" font-size="10" fill="#14532d">TIA / Driver</text>
+  <line x1="420" y1="140" x2="440" y2="140" stroke="#16a34a" stroke-width="3"/>
+  <circle cx="430" cy="140" r="4" fill="#16a34a"/>
+  <text x="430" y="185" text-anchor="middle" font-size="9" fill="#14532d">焊球</text>
+  <line x1="40" y1="240" x2="600" y2="240" stroke="#c9d4e4" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="48" y="232" font-size="11" fill="#6b7a90">热通路</text>
+  <rect x="190" y="255" width="230" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/>
+  <text x="305" y="275" text-anchor="middle" font-size="11" fill="#7f1d1d">热沉 + 热界面材料</text>
+  <line x1="305" y1="225" x2="305" y2="255" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <text x="305" y="310" text-anchor="middle" font-size="10" fill="#7f1d1d">波长温漂 ≈ 0.06–0.1 nm/K</text>
+  <rect x="40" y="325" width="12" height="12" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="58" y="335" font-size="10" fill="#1e3a8a">光</text>
+  <rect x="100" y="325" width="12" height="12" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="118" y="335" font-size="10" fill="#14532d">电</text>
+  <rect x="160" y="325" width="12" height="12" fill="#fee2e2" stroke="#ef4444"/>
+  <text x="178" y="335" font-size="10" fill="#7f1d1d">热</text>
+</svg>
