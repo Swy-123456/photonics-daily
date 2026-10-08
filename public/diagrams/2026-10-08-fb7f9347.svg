@@ -1,0 +1,35 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360' font-family='sans-serif'>
+<rect width='640' height='360' fill='#f7f9fc'/>
+<text x='320' y='28' text-anchor='middle' font-size='18' font-weight='bold' fill='#1a2b4a'>硅光芯片产业链与核心器件</text>
+<rect x='20' y='60' width='150' height='90' rx='10' fill='#dbeafe' stroke='#3b82f6'/>
+<text x='95' y='90' text-anchor='middle' font-size='14' fill='#1e3a8a'>设计端</text>
+<text x='95' y='112' text-anchor='middle' font-size='11' fill='#1e3a8a'>EDA + PDK</text>
+<text x='95' y='132' text-anchor='middle' font-size='11' fill='#1e3a8a'>器件库/仿真</text>
+<rect x='245' y='60' width='150' height='90' rx='10' fill='#dcfce7' stroke='#22c55e'/>
+<text x='320' y='90' text-anchor='middle' font-size='14' fill='#166534'>代工与封装</text>
+<text x='320' y='112' text-anchor='middle' font-size='11' fill='#166534'>SOI 流片</text>
+<text x='320' y='132' text-anchor='middle' font-size='11' fill='#166534'>光纤耦合/倒装焊</text>
+<rect x='470' y='60' width='150' height='90' rx='10' fill='#fef3c7' stroke='#f59e0b'/>
+<text x='545' y='90' text-anchor='middle' font-size='14' fill='#92400e'>应用端</text>
+<text x='545' y='112' text-anchor='middle' font-size='11' fill='#92400e'>数据中心/LiDAR</text>
+<text x='545' y='132' text-anchor='middle' font-size='11' fill='#92400e'>量子/传感</text>
+<line x1='170' y1='105' x2='245' y2='105' stroke='#64748b' stroke-width='2' marker-end='url(#a)'/>
+<line x1='395' y1='105' x2='470' y2='105' stroke='#64748b' stroke-width='2' marker-end='url(#a)'/>
+<defs><marker id='a' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'><path d='M0,0 L6,3 L0,6 z' fill='#64748b'/></marker></defs>
+<rect x='40' y='190' width='250' height='130' rx='10' fill='#ffffff' stroke='#94a3b8'/>
+<text x='165' y='215' text-anchor='middle' font-size='13' fill='#0f172a'>微环谐振器</text>
+<circle cx='120' cy='265' r='30' fill='none' stroke='#2563eb' stroke-width='3'/>
+<line x1='40' y1='265' x2='88' y2='265' stroke='#2563eb' stroke-width='3'/>
+<line x1='152' y1='265' x2='250' y2='265' stroke='#2563eb' stroke-width='3'/>
+<text x='165' y='310' text-anchor='middle' font-size='10' fill='#475569'>2πR n_eff = mλ</text>
+<rect x='350' y='190' width='250' height='130' rx='10' fill='#ffffff' stroke='#94a3b8'/>
+<text x='475' y='215' text-anchor='middle' font-size='13' fill='#0f172a'>马赫-曾德尔调制器</text>
+<line x1='370' y1='255' x2='410' y2='255' stroke='#7c3aed' stroke-width='3'/>
+<line x1='410' y1='255' x2='450' y2='235' stroke='#7c3aed' stroke-width='3'/>
+<line x1='410' y1='255' x2='450' y2='275' stroke='#7c3aed' stroke-width='3'/>
+<line x1='450' y1='235' x2='490' y2='255' stroke='#7c3aed' stroke-width='3'/>
+<line x1='450' y1='275' x2='490' y2='255' stroke='#7c3aed' stroke-width='3'/>
+<line x1='490' y1='255' x2='580' y2='255' stroke='#7c3aed' stroke-width='3'/>
+<text x='475' y='310' text-anchor='middle' font-size='10' fill='#475569'>P_out = P_in cos²(Δφ/2)</text>
+<text x='320' y='345' text-anchor='middle' font-size='10' fill='#64748b'>图例：蓝色=无源器件，紫色=有源调制，绿色=制造，黄色=应用</text>
+</svg>
