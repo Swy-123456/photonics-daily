@@ -1,0 +1,30 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360' font-family='sans-serif'>
+  <rect x='0' y='0' width='640' height='360' fill='#f7f9fc'/>
+  <text x='320' y='28' text-anchor='middle' font-size='16' font-weight='bold' fill='#1a2a44'>AI 集群光互连链路示意</text>
+  <rect x='20' y='120' width='90' height='60' rx='8' fill='#dbe7ff' stroke='#3b6fd4'/>
+  <text x='65' y='155' text-anchor='middle' font-size='12' fill='#1a2a44'>主机 ASIC</text>
+  <rect x='130' y='120' width='90' height='60' rx='8' fill='#ffe7c2' stroke='#d4881f'/>
+  <text x='175' y='148' text-anchor='middle' font-size='12' fill='#1a2a44'>PAM4</text>
+  <text x='175' y='164' text-anchor='middle' font-size='12' fill='#1a2a44'>DSP</text>
+  <rect x='240' y='120' width='90' height='60' rx='8' fill='#d8f3e0' stroke='#2e9e5b'/>
+  <text x='285' y='148' text-anchor='middle' font-size='12' fill='#1a2a44'>驱动器</text>
+  <text x='285' y='164' text-anchor='middle' font-size='12' fill='#1a2a44'>+ MZM</text>
+  <rect x='350' y='120' width='90' height='60' rx='8' fill='#e6dcff' stroke='#7a4fd4'/>
+  <text x='395' y='148' text-anchor='middle' font-size='12' fill='#1a2a44'>WDM</text>
+  <text x='395' y='164' text-anchor='middle' font-size='12' fill='#1a2a44'>复用器</text>
+  <line x1='440' y1='150' x2='500' y2='150' stroke='#3b6fd4' stroke-width='3'/>
+  <text x='470' y='140' text-anchor='middle' font-size='11' fill='#3b6fd4'>光纤</text>
+  <rect x='500' y='120' width='100' height='60' rx='8' fill='#e6dcff' stroke='#7a4fd4'/>
+  <text x='550' y='148' text-anchor='middle' font-size='12' fill='#1a2a44'>解复用</text>
+  <text x='550' y='164' text-anchor='middle' font-size='12' fill='#1a2a44'>+ PD/TIA</text>
+  <rect x='240' y='240' width='160' height='50' rx='8' fill='#ffe7c2' stroke='#d4881f'/>
+  <text x='320' y='270' text-anchor='middle' font-size='12' fill='#1a2a44'>CW 激光源（外置）</text>
+  <line x1='320' y1='240' x2='285' y2='180' stroke='#d4881f' stroke-width='2' stroke-dasharray='4 3'/>
+  <text x='320' y='320' text-anchor='middle' font-size='11' fill='#666'>目标：200G/lane，能耗 &lt; 5 pJ/bit</text>
+  <rect x='20' y='300' width='12' height='12' fill='#dbe7ff' stroke='#3b6fd4'/>
+  <text x='38' y='311' font-size='11' fill='#1a2a44'>电域</text>
+  <rect x='100' y='300' width='12' height='12' fill='#d8f3e0' stroke='#2e9e5b'/>
+  <text x='118' y='311' font-size='11' fill='#1a2a44'>光域</text>
+  <rect x='180' y='300' width='12' height='12' fill='#e6dcff' stroke='#7a4fd4'/>
+  <text x='198' y='311' font-size='11' fill='#1a2a44'>波分复用</text>
+</svg>
