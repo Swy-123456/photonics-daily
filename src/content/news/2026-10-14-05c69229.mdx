@@ -1,0 +1,28 @@
+---
+title: "Voyant 以硅光（SiPh）方案瞄准 AI 数据中心互连"
+sourceName: "PIC Magazine"
+sourceUrl: "https://picmagazine.net/article/125606/Voyant_targets_AI_data_centres_with_SiPh"
+publishedAt: "2026-10-14"
+category: "硅光芯片"
+summary: "Voyant 借硅光集成切入 AI 数据中心，以光互连破解电互连带宽与功耗瓶颈。"
+background: "AI 大模型训练与推理对算力集群的互连带宽、时延和能效提出指数级要求。传统可插拔光模块在 800G/1.6T 时代面临功耗墙与面板密度限制，电互连在 224 Gbps/lane 以上铜缆距离急剧缩短。硅基光子学（Silicon Photonics, SiPh）利用 CMOS 工艺在硅上集成波导、调制器、探测器，实现高密度、低成本的近封装光学（NPO）与共封装光学（CPO）。Voyant 作为新兴硅光玩家，选择此时切入 AI 数据中心，意在抓住 CPO 从 2025 年试点走向 2027—2030 规模部署的窗口期，与 Broadcom、Marvell、Intel、Ayar Labs 等竞争。"
+mechanism: "硅光链路的核心是「电—光—电」转换：电信号经马赫-曾德尔调制器（MZM）或微环调制器加载到光载波上。MZM 两臂相位差 Δφ 决定输出强度：$$P_{out}=P_{in}\\cos^2(\\Delta\\phi/2),\\quad \\Delta\\phi=\\frac{2\\pi}{\\lambda}\\Delta n_{eff}L$$ 其中 Δn_eff 由等离子体色散效应（载流子注入/耗尽）改变，通俗说就是「用电改变玻璃的折射率，让两束光干涉相消或相长」。微环调制器则像「光的高速公路收费站」：只有满足谐振条件 $m\\lambda=2\\pi n_{eff}R$ 的波长才能留在环内，电调谐使谐振峰移动，从而调制特定波长。接收端用锗光电探测器，基于光电效应 $I_{ph}=R\\cdot P_{opt}$，把光功率还原为电流。链路预算由 $P_{rx}=P_{tx}-L_{waveguide}-L_{coupling}-L_{mod}-L_{fiber}$ 决定，硅波导损耗约 0.5–2 dB/cm，光纤耦合约 1–2 dB/端。AI 数据中心还常用波分复用（WDM）与四波混频（FWM）等非线性效应需被抑制或利用：FWM 在密集 WDM 中产生串扰，公式为 $\\omega_1+\\omega_2=\\omega_3+\\omega_4$。Voyant 方案大概率采用 1310 nm 或 1550 nm 波段、O 波段 CWDM 或 DWDM，配合外置激光源（ELS）与 CPO 封装，把光引擎贴近 ASIC 以缩短电走线。"
+diagram: "2026-10-14-05c69229.svg"
+diagramAlt: "左侧 ASIC 通过电走线连接硅光芯片，芯片内含 MZM 与微环调制器，光经波导耦合到光纤，右侧探测器接收并转回电信号。"
+diagramCaption: "图 1 硅光 CPO 链路：ASIC—调制器—波导—探测器—光纤，含微环谐振与 MZM 示意。"
+diagramExplanation: "1) ASIC 输出高速电信号；2) 驱动芯片放大后送入 MZM/微环；3) 外置激光源提供 CW 光；4) 调制后的光经边缘耦合器进入光纤；5) 远端探测器将光转为电流；6) TIA 放大回电信号。微环旁标注谐振条件，MZM 旁标注干涉公式。"
+applications: "AI 训练集群 GPU 间互连、HPC、CPO 交换机、NPO 光模块、量子光子学接口。工程挑战包括：激光源可靠性（ELS 寿命）、光纤耦合对准公差、热调谐功耗、WDM 串扰、封装良率与测试成本。"
+glossary: [{"term":"硅光（SiPh）","definition":"用硅和 CMOS 工艺制造光器件，把光路做在芯片上。"},{"term":"CPO","definition":"共封装光学，把光引擎和交换 ASIC 封在同一基板上，缩短电链路。"},{"term":"MZM","definition":"马赫-曾德尔调制器，用干涉臂相位差控制光强。"},{"term":"微环谐振器","definition":"环形波导，只让满足谐振条件的波长循环，像光的高速公路收费站。"},{"term":"四波混频","definition":"非线性效应，多个波长相互作用产生新波长，可能造成串扰。"}]
+tags: ["光通信","光计算"]
+---
+## 知识延伸：从可插拔到 CPO 的演进
+
+早期数据中心用可插拔光模块，电信号从 ASIC 走到面板再转光，距离长、功耗高。CPO 把光引擎移到 ASIC 旁边，电走线从几十厘米缩到几毫米，功耗可降 30%–50%。硅光的优势是晶圆级制造，但激光器仍是 III-V 材料，常用外置激光源（ELS）或异质集成。
+
+## 上下游器件
+
+上游：SOI 晶圆、CW 激光器、光纤阵列、驱动/TIA 芯片。下游：交换机、GPU 集群、光互连标准（OIF、IEEE 802.3）。
+
+## 与同类方案对比
+
+薄膜铌酸锂（TFLN）调制器带宽高但成本高；磷化铟（InP）集成激光器方便但晶圆尺寸小。硅光胜在 CMOS 兼容与规模，Voyant 的成败取决于封装良率与激光源生态。
