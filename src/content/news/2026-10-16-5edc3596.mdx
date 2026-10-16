@@ -1,0 +1,49 @@
+---
+title: "Flexcompute 发布 PhotonForge 2.0：光子芯片仿真进入「云原生+GPU 加速」时代"
+sourceName: "PIC Magazine"
+sourceUrl: "https://picmagazine.net/article/125625/Flexcompute_launches_PhotonForge_20"
+publishedAt: "2026-10-16"
+category: "光子集成回路"
+summary: "PhotonForge 2.0 以 GPU 加速 FDTD 与云原生工作流，把光子芯片全波仿真速度提升一个数量级。"
+background: "光子集成回路（PIC）把激光器、调制器、探测器、波导与微环等器件集成到同一芯片上，其设计高度依赖电磁全波仿真。过去二十年，时域有限差分（FDTD）与有限元（FEM）方法主导了光子器件建模，但三维全波仿真计算量随网格尺寸呈四次方增长，一个微环谐振器或马赫-曾德尔调制器的参数扫描往往需要数小时到数天。传统方案依赖 CPU 集群与商业许可，成本高、弹性差。Flexcompute 以「云原生 + GPU 加速」切入，其 Flow360 已在计算流体力学领域验证了 GPU 求解器的可行性。PhotonForge 2.0 把这一路线带入光子学，试图用云端 GPU 弹性算力替代本地 CPU 集群，并整合版图导入、多物理场耦合与逆向设计流程，回应 PIC 设计周期长、迭代慢的行业痛点。"
+mechanism: |
+  PhotonForge 2.0 的核心是 GPU 加速的三维时域有限差分（FDTD）求解器。FDTD 从麦克斯韦旋度方程出发：
+  $$\nabla \times \mathbf{E} = -\mu \frac{\partial \mathbf{H}}{\partial t}, \qquad \nabla \times \mathbf{H} = \mathbf{J} + \varepsilon \frac{\partial \mathbf{E}}{\partial t}$$
+  其中 $\mathbf{E}$ 为电场、$\mathbf{H}$ 为磁场、$\varepsilon$ 为介电常数、$\mu$ 为磁导率、$\mathbf{J}$ 为电流密度。通俗地说，这两条方程描述「变化的电场生磁场、变化的磁场生电场」，FDTD 把空间切成 Yee 网格、把时间切成小步，像逐帧播放电影一样推进电磁场演化。
+  
+  数值稳定要求时间步满足 CFL 条件：
+  $$\Delta t \le \frac{1}{c\sqrt{(1/\Delta x)^2+(1/\Delta y)^2+(1/\Delta z)^2}}$$
+  其中 $c$ 为真空光速，$\Delta x,\Delta y,\Delta z$ 为网格步长。网格越细，时间步越小，计算量急剧上升——这正是 GPU 并行加速的价值所在：每个网格点的场更新彼此独立，天然适合 GPU 的数千个流处理器并行执行。
+  
+  对于光子器件，仿真还需处理色散材料与非线性效应。色散通过辅助微分方程（ADE）建模：
+  $$\frac{d\mathbf{P}}{dt} + \gamma \mathbf{P} = \varepsilon_0 \chi_0 \mathbf{E}$$
+  其中 $\mathbf{P}$ 为极化强度、$\gamma$ 为阻尼系数、$\chi_0$ 为极化率。通俗理解：材料对不同频率光的响应不同，ADE 用额外变量记住「材料的历史响应」，从而正确模拟波导色散与微环谐振。
+  
+  PhotonForge 2.0 还集成了频域求解与模式分析，可计算有效折射率 $n_{\text{eff}}$：
+  $$\beta = \frac{2\pi n_{\text{eff}}}{\lambda_0}$$
+  其中 $\beta$ 为传播常数、$\lambda_0$ 为真空波长。这决定了波导中光的相位演化速度，是设计定向耦合器、微环与调制器的基础。
+  
+  在逆向设计方面，伴随法（adjoint method）通过一次正向仿真与一次伴随仿真即可获得目标函数对成千上万个几何参数的梯度：
+  $$\frac{dF}{dp} = \frac{\partial F}{\partial p} + \text{Re}\left[\int \mathbf{E}_{\text{adj}} \cdot \frac{\partial \mathbf{D}}{\partial p} \, dV \right]$$
+  其中 $F$ 为目标函数、$p$ 为几何参数、$\mathbf{E}_{\text{adj}}$ 为伴随场。通俗地说，伴随法像「反向传播」一样，用一次额外仿真就能知道每个像素该往哪调，从而把光子器件的优化从「试错」变成「自动爬山」。
+diagram: "2026-10-16-5edc3596.svg"
+diagramAlt: "左侧为版图与材料库输入，中间为云端 GPU 集群运行 FDTD/FEM 求解器，右侧输出 S 参数、场分布与逆向设计结果。"
+diagramCaption: "图 1：PhotonForge 2.0 云原生 GPU 加速光子仿真工作流示意。"
+diagramExplanation: "图示从左到右展示 PhotonForge 2.0 的工作流：左侧「设计输入」包括 GDS 版图、材料色散模型与光源设置；中间「GPU 云求解」展示 Yee 网格与并行场更新，标注 CFL 条件与伴随法梯度；右侧「结果输出」给出 S 参数、模式场分布、微环谐振谱与逆向优化版图。底部图例区分正向仿真、伴随仿真与优化循环。"
+applications: "PhotonForge 2.0 面向硅光芯片、薄膜铌酸锂调制器、量子光子器件与光互连模块的设计。典型场景包括：微环谐振器波长调谐仿真、马赫-曾德尔调制器行波电极设计、光栅耦合器带宽优化、以及基于伴随法的超紧凑分束器逆向设计。工程挑战在于：GPU 显存限制大规模三维网格、色散与非线性材料模型精度、多物理场（热-光-电）耦合一致性，以及云端数据安全与许可成本。"
+glossary: [{"term":"FDTD","definition":"时域有限差分，把电磁场在空间和时间上离散化，逐帧推进求解麦克斯韦方程。"},{"term":"CFL 条件","definition":"数值稳定条件，要求时间步足够小，否则仿真会像「步子太大扯到蛋」一样发散。"},{"term":"伴随法","definition":"一种高效梯度计算方法，用一次反向仿真获得所有几何参数的梯度，用于逆向设计。"},{"term":"有效折射率","definition":"描述光在波导中传播相速度的等效折射率，决定相位与谐振条件。"},{"term":"S 参数","definition":"散射参数，描述器件各端口间光的反射与透射关系，是光子器件的「电路指标」。"}]
+tags: ["光通信","光计算"]
+---
+## 知识延伸：光子仿真器的上下游
+
+### 上游：从版图到网格
+光子芯片设计通常从 GDSII 版图开始，经过网格划分生成 Yee 网格。网格质量直接决定仿真精度与速度：波导侧壁需要细网格，而衬底可以粗网格。PhotonForge 2.0 的自动化网格生成降低了工程师的手动调参负担。
+
+### 中游：求解器家族
+除 FDTD 外，光子仿真还常用有限元法（FEM）、光束传播法（BPM）与传输矩阵法（TMM）。FDTD 适合宽带与非线性，FEM 适合频域高精度，BPM 适合长波导快速扫描。PhotonForge 2.0 的多求解器策略让用户按需选择。
+
+### 下游：从仿真到流片
+仿真输出的 S 参数、模式场与热分布会进入链路预算与版图验证。对于硅光调制器，还需与电子驱动电路协同仿真。GPU 加速把迭代周期从「天」压缩到「小时」，使逆向设计与全局优化真正可行。
+
+### 同类方案对比
+Lumerical（Ansys）、COMSOL、Tidy3D 等是主要竞品。Tidy3D 同样主打云端 GPU FDTD，PhotonForge 2.0 的差异化在于与 Flexcompute 的 CFD 生态整合、多物理场耦合与逆向设计工作流。

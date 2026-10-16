@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#f8f9fa"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">PhotonForge 2.0 云原生 GPU 光子仿真工作流</text>
+  <rect x="20" y="60" width="170" height="220" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="105" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">设计输入</text>
+  <text x="105" y="110" text-anchor="middle" font-size="11" fill="#333">GDS 版图</text>
+  <text x="105" y="132" text-anchor="middle" font-size="11" fill="#333">材料色散模型</text>
+  <text x="105" y="154" text-anchor="middle" font-size="11" fill="#333">光源与端口</text>
+  <text x="105" y="176" text-anchor="middle" font-size="11" fill="#333">网格划分</text>
+  <rect x="235" y="60" width="170" height="220" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="320" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">GPU 云求解</text>
+  <text x="320" y="110" text-anchor="middle" font-size="11" fill="#333">FDTD / FEM</text>
+  <text x="320" y="132" text-anchor="middle" font-size="11" fill="#333">Yee 网格并行更新</text>
+  <text x="320" y="154" text-anchor="middle" font-size="11" fill="#333">CFL 稳定条件</text>
+  <text x="320" y="176" text-anchor="middle" font-size="11" fill="#333">伴随法梯度</text>
+  <rect x="450" y="60" width="170" height="220" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
+  <text x="535" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">结果输出</text>
+  <text x="535" y="110" text-anchor="middle" font-size="11" fill="#333">S 参数</text>
+  <text x="535" y="132" text-anchor="middle" font-size="11" fill="#333">模式场分布</text>
+  <text x="535" y="154" text-anchor="middle" font-size="11" fill="#333">谐振谱</text>
+  <text x="535" y="176" text-anchor="middle" font-size="11" fill="#333">逆向优化版图</text>
+  <line x1="190" y1="170" x2="230" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="405" y1="170" x2="445" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="20" y="300" width="600" height="40" rx="6" fill="#fff" stroke="#ccc"/>
+  <rect x="35" y="312" width="14" height="14" fill="#e3f2fd" stroke="#1976d2"/>
+  <text x="55" y="324" font-size="11" fill="#333">正向仿真</text>
+  <rect x="145" y="312" width="14" height="14" fill="#fff3e0" stroke="#f57c00"/>
+  <text x="165" y="324" font-size="11" fill="#333">GPU 并行</text>
+  <rect x="255" y="312" width="14" height="14" fill="#e8f5e9" stroke="#388e3c"/>
+  <text x="275" y="324" font-size="11" fill="#333">优化循环</text>
+</svg>
