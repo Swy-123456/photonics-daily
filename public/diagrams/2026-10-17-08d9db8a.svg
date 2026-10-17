@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#d62728"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#1f77b4"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#222">芯片级光学陀螺仪原理示意</text>
+  <!-- Laser -->
+  <rect x="40" y="150" width="70" height="50" rx="6" fill="#ffe08a" stroke="#b8860b"/>
+  <text x="75" y="180" text-anchor="middle" font-size="12" fill="#333">激光器</text>
+  <!-- Beam splitter -->
+  <polygon points="150,145 190,175 150,205 110,175" fill="#c7e9c0" stroke="#2ca02c"/>
+  <text x="150" y="180" text-anchor="middle" font-size="11" fill="#333">分束器</text>
+  <!-- Ring -->
+  <circle cx="330" cy="175" r="70" fill="none" stroke="#555" stroke-width="3"/>
+  <circle cx="330" cy="175" r="62" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="330" y="170" text-anchor="middle" font-size="12" fill="#555">微环谐振腔</text>
+  <text x="330" y="188" text-anchor="middle" font-size="11" fill="#888">(高Q值)</text>
+  <!-- CW path (red) -->
+  <path d="M190,175 L260,175" stroke="#d62728" stroke-width="2.5" fill="none" marker-end="url(#arrowRed)"/>
+  <path d="M330,105 A70,70 0 0 1 400,175" stroke="#d62728" stroke-width="2.5" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="360" y="100" font-size="11" fill="#d62728">顺时针</text>
+  <!-- CCW path (blue) -->
+  <path d="M190,175 L260,175" stroke="#1f77b4" stroke-width="2.5" fill="none" marker-end="url(#arrowBlue)" transform="translate(0,6)"/>
+  <path d="M330,245 A70,70 0 0 1 260,175" stroke="#1f77b4" stroke-width="2.5" fill="none" marker-end="url(#arrowBlue)"/>
+  <text x="290" y="255" font-size="11" fill="#1f77b4">逆时针</text>
+  <!-- Rotation arrow -->
+  <path d="M330,175 m-95,0 a95,95 0 1,1 20,-40" stroke="#9467bd" stroke-width="2" fill="none" stroke-dasharray="6 4" marker-end="url(#arrowRed)"/>
+  <text x="200" y="110" font-size="12" fill="#9467bd">旋转 Ω</text>
+  <!-- Combiner -->
+  <polygon points="470,145 510,175 470,205 430,175" fill="#c7e9c0" stroke="#2ca02c"/>
+  <text x="470" y="180" text-anchor="middle" font-size="11" fill="#333">合束</text>
+  <path d="M400,175 L430,175" stroke="#555" stroke-width="2" fill="none"/>
+  <!-- Detector -->
+  <rect x="530" y="150" width="70" height="50" rx="6" fill="#b0d4f1" stroke="#1f77b4"/>
+  <text x="565" y="180" text-anchor="middle" font-size="12" fill="#333">探测器</text>
+  <path d="M510,175 L530,175" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowRed)"/>
+  <!-- Legend -->
+  <rect x="40" y="290" width="560" height="55" rx="6" fill="#f7f7f7" stroke="#ccc"/>
+  <line x1="60" y1="310" x2="100" y2="310" stroke="#d62728" stroke-width="3"/>
+  <text x="108" y="314" font-size="11" fill="#333">顺时针光路</text>
+  <line x1="210" y1="310" x2="250" y2="310" stroke="#1f77b4" stroke-width="3"/>
+  <text x="258" y="314" font-size="11" fill="#333">逆时针光路</text>
+  <line x1="360" y1="310" x2="400" y2="310" stroke="#9467bd" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="408" y="314" font-size="11" fill="#333">旋转方向</text>
+  <text x="60" y="334" font-size="11" fill="#666">旋转引起萨格纳克相位差 Δφ，干涉光强随角速度变化</text>
+</svg>
