@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#f7f9fc"/>
+  <text x="320" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a2b4a">光纤与PIC波导耦合封装方案</text>
+  <text x="20" y="60" font-size="13" font-weight="bold" fill="#1a2b4a">(a) 边缘耦合 + 模斑转换器</text>
+  <rect x="40" y="80" width="120" height="40" rx="6" fill="#cfe3ff" stroke="#3a6ea5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12" fill="#1a2b4a">光纤</text>
+  <line x1="160" y1="100" x2="200" y2="100" stroke="#3a6ea5" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M200,85 L260,92 L260,108 L200,115 Z" fill="#ffe0b2" stroke="#c77700"/>
+  <text x="230" y="78" text-anchor="middle" font-size="11" fill="#8a4b00">模斑转换器</text>
+  <rect x="260" y="80" width="200" height="40" rx="4" fill="#e8f0e8" stroke="#4a7c59"/>
+  <text x="360" y="105" text-anchor="middle" font-size="12" fill="#1a2b4a">硅波导芯片</text>
+  <text x="470" y="95" font-size="11" fill="#555">损耗 1–2 dB</text>
+  <text x="470" y="112" font-size="11" fill="#555">带宽宽</text>
+  <text x="20" y="180" font-size="13" font-weight="bold" fill="#1a2b4a">(b) 光栅耦合器（垂直耦合）</text>
+  <rect x="180" y="240" width="280" height="40" rx="4" fill="#e8f0e8" stroke="#4a7c59"/>
+  <text x="320" y="265" text-anchor="middle" font-size="12" fill="#1a2b4a">硅波导芯片</text>
+  <g stroke="#c77700" stroke-width="2">
+    <line x1="270" y1="240" x2="270" y2="225"/>
+    <line x1="285" y1="240" x2="285" y2="225"/>
+    <line x1="300" y1="240" x2="300" y2="225"/>
+    <line x1="315" y1="240" x2="315" y2="225"/>
+    <line x1="330" y1="240" x2="330" y2="225"/>
+    <line x1="345" y1="240" x2="345" y2="225"/>
+  </g>
+  <text x="310" y="218" text-anchor="middle" font-size="11" fill="#8a4b00">光栅（周期Λ）</text>
+  <line x1="310" y1="180" x2="310" y2="215" stroke="#3a6ea5" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="330" y="195" font-size="12" fill="#1a2b4a">光纤（近垂直）</text>
+  <text x="470" y="250" font-size="11" fill="#555">损耗 2–4 dB</text>
+  <text x="470" y="267" font-size="11" fill="#555">带宽 30–40 nm</text>
+  <rect x="20" y="310" width="600" height="34" rx="4" fill="#fff3cd" stroke="#c7a500"/>
+  <text x="30" y="332" font-size="12" fill="#6b5200">对准容差：横向 &lt; ±0.5 μm，角度 &lt; 0.1°；有源对准精度高但慢，无源对准适合量产</text>
+  <g font-size="11" fill="#333">
+    <rect x="470" y="60" width="10" height="10" fill="#cfe3ff" stroke="#3a6ea5"/><text x="485" y="69">光纤</text>
+    <rect x="520" y="60" width="10" height="10" fill="#ffe0b2" stroke="#c77700"/><text x="535" y="69">转换器</text>
+    <rect x="470" y="78" width="10" height="10" fill="#e8f0e8" stroke="#4a7c59"/><text x="485" y="87">波导芯片</text>
+  </g>
+</svg>
