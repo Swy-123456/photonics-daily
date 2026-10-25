@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <linearGradient id="silicon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c0c0c0"/>
+      <stop offset="100%" stop-color="#a0a0a0"/>
+    </linearGradient>
+    <linearGradient id="oxide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f0ff"/>
+      <stop offset="100%" stop-color="#b0d0f0"/>
+    </linearGradient>
+    <linearGradient id="qd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffcc00"/>
+      <stop offset="100%" stop-color="#ff9900"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景 -->
+  <rect width="640" height="360" fill="#f8f9fa"/>
+  <!-- 硅衬底 -->
+  <rect x="40" y="260" width="560" height="40" fill="url(#silicon)" stroke="#888"/>
+  <text x="320" y="285" text-anchor="middle" font-size="12" fill="#333">硅衬底</text>
+  <!-- 下包层 -->
+  <rect x="40" y="220" width="560" height="40" fill="url(#oxide)" stroke="#888"/>
+  <text x="320" y="245" text-anchor="middle" font-size="12" fill="#333">二氧化硅下包层</text>
+  <!-- 硅波导 -->
+  <rect x="80" y="190" width="200" height="30" fill="#4a90d9" stroke="#2c5f8a"/>
+  <rect x="360" y="190" width="200" height="30" fill="#4a90d9" stroke="#2c5f8a"/>
+  <text x="180" y="210" text-anchor="middle" font-size="11" fill="#fff">硅波导</text>
+  <text x="460" y="210" text-anchor="middle" font-size="11" fill="#fff">硅波导</text>
+  <!-- 微环 -->
+  <circle cx="320" cy="205" r="45" fill="none" stroke="#4a90d9" stroke-width="8"/>
+  <text x="320" y="170" text-anchor="middle" font-size="11" fill="#2c5f8a">微环谐振器</text>
+  <!-- 量子点层 -->
+  <rect x="120" y="150" width="120" height="20" fill="url(#qd)" stroke="#cc7700" rx="4"/>
+  <text x="180" y="164" text-anchor="middle" font-size="11" fill="#333">量子点层</text>
+  <!-- 上包层 -->
+  <rect x="40" y="120" width="560" height="30" fill="url(#oxide)" stroke="#888" opacity="0.6"/>
+  <text x="320" y="140" text-anchor="middle" font-size="12" fill="#333">上包层</text>
+  <!-- 泵浦光箭头 -->
+  <line x1="180" y1="80" x2="180" y2="145" stroke="#ff6600" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <defs>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#ff6600"/>
+    </marker>
+  </defs>
+  <text x="180" y="75" text-anchor="middle" font-size="11" fill="#ff6600">泵浦光</text>
+  <!-- 输出光箭头 -->
+  <line x1="560" y1="205" x2="610" y2="205" stroke="#ff0000" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#ff0000"/>
+    </marker>
+  </defs>
+  <text x="590" y="195" text-anchor="middle" font-size="11" fill="#ff0000">输出光</text>
+  <!-- 倏逝场耦合示意 -->
+  <path d="M240,160 Q280,180 300,190" stroke="#ff9900" stroke-width="1.5" stroke-dasharray="4,2" fill="none"/>
+  <text x="270" y="175" font-size="10" fill="#cc7700">倏逝场耦合</text>
+  <!-- 图例 -->
+  <rect x="480" y="20" width="140" height="80" fill="#fff" stroke="#ccc" rx="4"/>
+  <text x="490" y="38" font-size="10" fill="#333">图例</text>
+  <rect x="490" y="45" width="12" height="12" fill="#4a90d9"/>
+  <text x="508" y="55" font-size="10" fill="#333">硅波导</text>
+  <rect x="490" y="62" width="12" height="12" fill="url(#qd)"/>
+  <text x="508" y="72" font-size="10" fill="#333">量子点层</text>
+  <circle cx="496" cy="84" r="6" fill="none" stroke="#4a90d9" stroke-width="3"/>
+  <text x="508" y="88" font-size="10" fill="#333">微环</text>
+</svg>
