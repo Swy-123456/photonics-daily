@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="120" width="100" height="60" rx="8" fill="#4A90D9" stroke="#2C5F8A" stroke-width="2"/>
+  <text x="70" y="145" text-anchor="middle" fill="white" font-size="14" font-weight="bold">SLED芯片</text>
+  <text x="70" y="165" text-anchor="middle" fill="white" font-size="11">宽谱输出</text>
+  <path d="M120,150 L180,150" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="180" y="130" width="80" height="40" rx="6" fill="#F5A623" stroke="#B87A10" stroke-width="2"/>
+  <text x="220" y="154" text-anchor="middle" fill="white" font-size="12">分束器</text>
+  <path d="M260,150 L320,100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M260,150 L320,200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="320" y="70" width="100" height="60" rx="8" fill="#7B68EE" stroke="#4B3B9E" stroke-width="2"/>
+  <text x="370" y="95" text-anchor="middle" fill="white" font-size="13">调制器</text>
+  <text x="370" y="115" text-anchor="middle" fill="white" font-size="11">MZM</text>
+  <path d="M420,100 L500,100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="500" y="70" width="100" height="60" rx="8" fill="#50B86C" stroke="#2E7D44" stroke-width="2"/>
+  <text x="550" y="95" text-anchor="middle" fill="white" font-size="13">卫星</text>
+  <text x="550" y="115" text-anchor="middle" fill="white" font-size="11">光通信链路</text>
+  <rect x="320" y="170" width="100" height="60" rx="8" fill="#E85D75" stroke="#A83248" stroke-width="2"/>
+  <text x="370" y="195" text-anchor="middle" fill="white" font-size="13">光纤环圈</text>
+  <text x="370" y="215" text-anchor="middle" fill="white" font-size="11">陀螺</text>
+  <path d="M420,200 L500,200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="500" y="170" width="100" height="60" rx="8" fill="#50B86C" stroke="#2E7D44" stroke-width="2"/>
+  <text x="550" y="195" text-anchor="middle" fill="white" font-size="13">姿态控制</text>
+  <text x="550" y="215" text-anchor="middle" fill="white" font-size="11">角速度传感</text>
+  <path d="M530,130 L530,170" stroke="#333" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
+  <text x="540" y="155" fill="#333" font-size="10">反馈</text>
+  <rect x="20" y="280" width="600" height="60" rx="8" fill="#F0F0F0" stroke="#CCC" stroke-width="1"/>
+  <text x="40" y="305" font-size="12" fill="#333">图例：</text>
+  <rect x="100" y="292" width="16" height="16" fill="#4A90D9"/>
+  <text x="122" y="305" font-size="11" fill="#333">光源</text>
+  <rect x="170" y="292" width="16" height="16" fill="#F5A623"/>
+  <text x="192" y="305" font-size="11" fill="#333">分束</text>
+  <rect x="240" y="292" width="16" height="16" fill="#7B68EE"/>
+  <text x="262" y="305" font-size="11" fill="#333">调制</text>
+  <rect x="310" y="292" width="16" height="16" fill="#E85D75"/>
+  <text x="332" y="305" font-size="11" fill="#333">传感</text>
+  <rect x="380" y="292" width="16" height="16" fill="#50B86C"/>
+  <text x="402" y="305" font-size="11" fill="#333">终端</text>
+  <text x="40" y="330" font-size="11" fill="#666">SLED宽谱光（Δλ≈40 nm）经分束后分别用于光通信与光纤陀螺</text>
+</svg>
