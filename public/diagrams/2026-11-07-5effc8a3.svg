@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#e8f1fa"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="url(#bg)" rx="12"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a365d">荷兰–台湾硅光集成回路示意图</text>
+  <!-- III-V laser -->
+  <rect x="40" y="90" width="110" height="60" rx="8" fill="#f6ad55" stroke="#c05621" stroke-width="2"/>
+  <text x="95" y="118" text-anchor="middle" font-size="12" fill="#7b341e">III-V 激光器</text>
+  <text x="95" y="136" text-anchor="middle" font-size="10" fill="#7b341e">异质集成</text>
+  <!-- waveguide -->
+  <rect x="150" y="112" width="120" height="16" fill="#bee3f8" stroke="#2b6cb0" stroke-width="1.5"/>
+  <text x="210" y="105" text-anchor="middle" font-size="10" fill="#2b6cb0">硅波导</text>
+  <!-- MZI -->
+  <rect x="270" y="70" width="120" height="100" rx="8" fill="#c6f6d5" stroke="#276749" stroke-width="2"/>
+  <text x="330" y="95" text-anchor="middle" font-size="12" fill="#22543d">MZI 调制器</text>
+  <path d="M290,120 L310,100 L350,100 L370,120" fill="none" stroke="#276749" stroke-width="2"/>
+  <path d="M290,120 L310,140 L350,140 L370,120" fill="none" stroke="#276749" stroke-width="2"/>
+  <text x="330" y="160" text-anchor="middle" font-size="10" fill="#22543d">电极调相</text>
+  <!-- ring -->
+  <circle cx="470" cy="120" r="28" fill="none" stroke="#805ad5" stroke-width="3"/>
+  <text x="470" y="124" text-anchor="middle" font-size="11" fill="#44337a">微环</text>
+  <text x="470" y="162" text-anchor="middle" font-size="10" fill="#44337a">波长选择</text>
+  <!-- detector -->
+  <rect x="530" y="100" width="70" height="40" rx="6" fill="#feb2b2" stroke="#9b2c2c" stroke-width="2"/>
+  <text x="565" y="124" text-anchor="middle" font-size="11" fill="#742a2a">光电探测器</text>
+  <!-- arrows -->
+  <line x1="150" y1="120" x2="168" y2="120" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="260" y1="120" x2="278" y2="120" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="390" y1="120" x2="440" y2="120" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="498" y1="120" x2="528" y2="120" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- bottom labels -->
+  <rect x="40" y="250" width="260" height="70" rx="8" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.5"/>
+  <text x="170" y="275" text-anchor="middle" font-size="12" font-weight="bold" fill="#7b341e">荷兰侧</text>
+  <text x="170" y="295" text-anchor="middle" font-size="10" fill="#7b341e">光刻设备、InP 工艺、封装生态</text>
+  <rect x="340" y="250" width="260" height="70" rx="8" fill="#f0fff4" stroke="#276749" stroke-width="1.5"/>
+  <text x="470" y="275" text-anchor="middle" font-size="12" font-weight="bold" fill="#22543d">台湾侧</text>
+  <text x="470" y="295" text-anchor="middle" font-size="10" fill="#22543d">CMOS 代工、化合物半导体、封装测试</text>
+  <!-- legend -->
+  <rect x="40" y="330" width="12" height="12" fill="#f6ad55" stroke="#c05621"/>
+  <text x="58" y="340" font-size="10" fill="#4a5568">光源</text>
+  <rect x="110" y="330" width="12" height="12" fill="#c6f6d5" stroke="#276749"/>
+  <text x="128" y="340" font-size="10" fill="#4a5568">调制</text>
+  <rect x="180" y="330" width="12" height="12" fill="#805ad5" stroke="#44337a"/>
+  <text x="198" y="340" font-size="10" fill="#4a5568">滤波</text>
+  <rect x="250" y="330" width="12" height="12" fill="#feb2b2" stroke="#9b2c2c"/>
+  <text x="268" y="340" font-size="10" fill="#4a5568">探测</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360' font-family='sans-serif'>
+  <defs>
+    <marker id='arrow' markerWidth='8' markerHeight='8' refX='6' refY='3' orient='auto'>
+      <path d='M0,0 L6,3 L0,6 Z' fill='#333'/>
+    </marker>
+  </defs>
+  <rect x='10' y='10' width='620' height='340' fill='#f9f9f9' stroke='#ccc' rx='10'/>
+  <text x='320' y='35' text-anchor='middle' font-size='16' font-weight='bold' fill='#222'>PIC设计工具流程与核心物理模型</text>
+  <!-- 器件区 -->
+  <rect x='30' y='60' width='160' height='100' fill='#e3f2fd' stroke='#1976d2' rx='8'/>
+  <text x='110' y='85' text-anchor='middle' font-size='13' fill='#0d47a1'>光波导/微环</text>
+  <text x='110' y='105' text-anchor='middle' font-size='11' fill='#333'>谐振条件: 2πRn_eff=mλ</text>
+  <text x='110' y='125' text-anchor='middle' font-size='11' fill='#333'>模式求解: n_eff</text>
+  <rect x='30' y='180' width='160' height='100' fill='#e8f5e9' stroke='#388e3c' rx='8'/>
+  <text x='110' y='205' text-anchor='middle' font-size='13' fill='#1b5e20'>马赫-曾德尔干涉仪</text>
+  <text x='110' y='225' text-anchor='middle' font-size='11' fill='#333'>I_out ∝ cos(Δφ)</text>
+  <text x='110' y='245' text-anchor='middle' font-size='11' fill='#333'>Δφ=2πn_effΔL/λ</text>
+  <!-- 仿真引擎 -->
+  <rect x='230' y='100' width='160' height='140' fill='#fff3e0' stroke='#f57c00' rx='8'/>
+  <text x='310' y='125' text-anchor='middle' font-size='13' fill='#e65100'>多物理场仿真引擎</text>
+  <text x='310' y='150' text-anchor='middle' font-size='11' fill='#333'>光场求解</text>
+  <text x='310' y='170' text-anchor='middle' font-size='11' fill='#333'>电光效应</text>
+  <text x='310' y='190' text-anchor='middle' font-size='11' fill='#333'>热光调谐</text>
+  <text x='310' y='210' text-anchor='middle' font-size='11' fill='#333'>Δn = -½n³rE</text>
+  <!-- 系统验证 -->
+  <rect x='430' y='60' width='180' height='100' fill='#fce4ec' stroke='#c2185b' rx='8'/>
+  <text x='520' y='85' text-anchor='middle' font-size='13' fill='#880e4f'>系统级验证</text>
+  <text x='520' y='105' text-anchor='middle' font-size='11' fill='#333'>眼图/误码率</text>
+  <text x='520' y='125' text-anchor='middle' font-size='11' fill='#333'>链路预算</text>
+  <rect x='430' y='180' width='180' height='100' fill='#ede7f6' stroke='#5e35b1' rx='8'/>
+  <text x='520' y='205' text-anchor='middle' font-size='13' fill='#311b92'>紧凑模型库</text>
+  <text x='520' y='225' text-anchor='middle' font-size='11' fill='#333'>S参数/等效电路</text>
+  <text x='520' y='245' text-anchor='middle' font-size='11' fill='#333'>参数化单元</text>
+  <!-- 箭头 -->
+  <line x1='190' y1='110' x2='225' y2='140' stroke='#333' stroke-width='2' marker-end='url(#arrow)'/>
+  <line x1='190' y1='230' x2='225' y2='200' stroke='#333' stroke-width='2' marker-end='url(#arrow)'/>
+  <line x1='390' y1='170' x2='425' y2='130' stroke='#333' stroke-width='2' marker-end='url(#arrow)'/>
+  <line x1='390' y1='200' x2='425' y2='230' stroke='#333' stroke-width='2' marker-end='url(#arrow)'/>
+  <!-- 图例 -->
+  <rect x='30' y='300' width='12' height='12' fill='#e3f2fd' stroke='#1976d2'/>
+  <text x='48' y='311' font-size='11' fill='#333'>无源器件</text>
+  <rect x='120' y='300' width='12' height='12' fill='#e8f5e9' stroke='#388e3c'/>
+  <text x='138' y='311' font-size='11' fill='#333'>干涉器件</text>
+  <rect x='210' y='300' width='12' height='12' fill='#fff3e0' stroke='#f57c00'/>
+  <text x='228' y='311' font-size='11' fill='#333'>仿真引擎</text>
+  <rect x='300' y='300' width='12' height='12' fill='#fce4ec' stroke='#c2185b'/>
+  <text x='318' y='311' font-size='11' fill='#333'>系统验证</text>
+  <rect x='390' y='300' width='12' height='12' fill='#ede7f6' stroke='#5e35b1'/>
+  <text x='408' y='311' font-size='11' fill='#333'>模型库</text>
+</svg>

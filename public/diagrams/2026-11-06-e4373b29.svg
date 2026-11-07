@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#fafafa"/>
+  <text x="320" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#222">对抗去偏拉曼IDH1分型流程</text>
+
+  <!-- 光谱输入 -->
+  <rect x="20" y="70" width="120" height="80" rx="8" fill="#d6eaf8" stroke="#2e86c1"/>
+  <text x="80" y="95" text-anchor="middle" font-size="12" fill="#1b4f72">拉曼光谱 x</text>
+  <polyline points="35,135 55,110 70,130 85,100 100,125 115,115 125,130" fill="none" stroke="#2e86c1" stroke-width="2"/>
+  <text x="80" y="165" text-anchor="middle" font-size="10" fill="#555">波数/cm⁻¹ →</text>
+
+  <!-- 特征提取器 -->
+  <rect x="190" y="75" width="120" height="70" rx="8" fill="#d5f5e3" stroke="#27ae60"/>
+  <text x="250" y="100" text-anchor="middle" font-size="12" fill="#145a32">特征提取器 fθ</text>
+  <text x="250" y="120" text-anchor="middle" font-size="11" fill="#145a32">表征 z</text>
+
+  <!-- 分类器 -->
+  <rect x="370" y="45" width="120" height="60" rx="8" fill="#fdebd0" stroke="#e67e22"/>
+  <text x="430" y="68" text-anchor="middle" font-size="12" fill="#7e5109">IDH1分类器 gφ</text>
+  <text x="430" y="88" text-anchor="middle" font-size="11" fill="#7e5109">突变 / 野生型</text>
+
+  <!-- 患者判别器 -->
+  <rect x="370" y="140" width="120" height="60" rx="8" fill="#fadbd8" stroke="#c0392b"/>
+  <text x="430" y="163" text-anchor="middle" font-size="12" fill="#78281f">患者判别器 dψ</text>
+  <text x="430" y="183" text-anchor="middle" font-size="11" fill="#78281f">患者身份 p</text>
+
+  <!-- GRL -->
+  <rect x="300" y="150" width="50" height="40" rx="6" fill="#e8daef" stroke="#8e44ad"/>
+  <text x="325" y="175" text-anchor="middle" font-size="11" fill="#4a235a">GRL</text>
+
+  <!-- 前向箭头 -->
+  <line x1="140" y1="110" x2="185" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="310" y1="100" x2="365" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="310" y1="120" x2="365" y2="160" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 对抗梯度 -->
+  <path d="M370,170 C340,200 300,200 270,150" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowRed)"/>
+  <text x="300" y="225" text-anchor="middle" font-size="10" fill="#c0392b">梯度反转：欺骗患者判别器</text>
+
+  <!-- 结果 -->
+  <rect x="520" y="70" width="100" height="110" rx="8" fill="#fef9e7" stroke="#b7950b"/>
+  <text x="570" y="95" text-anchor="middle" font-size="12" fill="#7d6608">平衡准确率</text>
+  <text x="570" y="125" text-anchor="middle" font-size="22" font-weight="bold" fill="#b7950b">81%</text>
+  <text x="570" y="150" text-anchor="middle" font-size="10" fill="#7d6608">留出患者验证</text>
+
+  <!-- 图例 -->
+  <line x1="30" y1="300" x2="70" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="80" y="305" font-size="11" fill="#333">前向传播</text>
+  <line x1="180" y1="300" x2="220" y2="300" stroke="#c0392b" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowRed)"/>
+  <text x="230" y="305" font-size="11" fill="#c0392b">对抗梯度</text>
+  <rect x="340" y="290" width="16" height="16" fill="#d6eaf8" stroke="#2e86c1"/>
+  <text x="362" y="303" font-size="11" fill="#333">输入/光谱</text>
+  <rect x="450" y="290" width="16" height="16" fill="#d5f5e3" stroke="#27ae60"/>
+  <text x="472" y="303" font-size="11" fill="#333">表征</text>
+  <rect x="530" y="290" width="16" height="16" fill="#fadbd8" stroke="#c0392b"/>
+  <text x="552" y="303" font-size="11" fill="#333">判别器</text>
+</svg>
