@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="Arial, sans-serif">
+  <rect x="0" y="0" width="640" height="360" fill="#f8f9fa"/>
+  <text x="320" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">Vision IsoStation™ Plus 隔振原理</text>
+  <!-- 地面振动源 -->
+  <rect x="40" y="80" width="120" height="60" rx="8" fill="#e74c3c" opacity="0.8"/>
+  <text x="100" y="105" text-anchor="middle" font-size="14" fill="#fff">地面振动</text>
+  <text x="100" y="125" text-anchor="middle" font-size="12" fill="#fff">宽频激励</text>
+  <!-- 箭头 -->
+  <line x1="160" y1="110" x2="210" y2="110" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 被动隔振层 -->
+  <rect x="210" y="70" width="120" height="80" rx="8" fill="#3498db" opacity="0.8"/>
+  <text x="270" y="95" text-anchor="middle" font-size="14" fill="#fff">被动隔振</text>
+  <text x="270" y="115" text-anchor="middle" font-size="12" fill="#fff">空气弹簧</text>
+  <text x="270" y="135" text-anchor="middle" font-size="12" fill="#fff">低固有频率</text>
+  <!-- 箭头 -->
+  <line x1="330" y1="110" x2="380" y2="110" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 主动隔振层 -->
+  <rect x="380" y="60" width="120" height="100" rx="8" fill="#2ecc71" opacity="0.8"/>
+  <text x="440" y="85" text-anchor="middle" font-size="14" fill="#fff">主动阻尼</text>
+  <text x="440" y="105" text-anchor="middle" font-size="12" fill="#fff">传感器+控制器</text>
+  <text x="440" y="125" text-anchor="middle" font-size="12" fill="#fff">音圈电机</text>
+  <text x="440" y="145" text-anchor="middle" font-size="12" fill="#fff">反相力抑制</text>
+  <!-- 箭头 -->
+  <line x1="500" y1="110" x2="550" y2="110" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 工作台面 -->
+  <rect x="550" y="80" width="70" height="60" rx="8" fill="#f39c12" opacity="0.8"/>
+  <text x="585" y="105" text-anchor="middle" font-size="14" fill="#fff">工作台面</text>
+  <text x="585" y="125" text-anchor="middle" font-size="12" fill="#fff">稳定输出</text>
+  <!-- 传递率曲线 -->
+  <text x="320" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">振动传递率曲线</text>
+  <!-- 坐标轴 -->
+  <line x1="120" y1="320" x2="560" y2="320" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="120" y1="220" x2="120" y2="320" stroke="#2c3e50" stroke-width="2"/>
+  <text x="340" y="345" text-anchor="middle" font-size="12" fill="#2c3e50">频率 (Hz)</text>
+  <text x="90" y="270" text-anchor="middle" font-size="12" fill="#2c3e50" transform="rotate(-90,90,270)">传递率 (dB)</text>
+  <!-- 刻度 -->
+  <text x="120" y="335" text-anchor="middle" font-size="10" fill="#2c3e50">0.1</text>
+  <text x="230" y="335" text-anchor="middle" font-size="10" fill="#2c3e50">1</text>
+  <text x="340" y="335" text-anchor="middle" font-size="10" fill="#2c3e50">10</text>
+  <text x="450" y="335" text-anchor="middle" font-size="10" fill="#2c3e50">100</text>
+  <text x="540" y="335" text-anchor="middle" font-size="10" fill="#2c3e50">1000</text>
+  <!-- 被动隔振曲线（虚线） -->
+  <path d="M120,250 Q180,230 230,280 Q280,320 340,300 Q400,280 450,290 Q500,300 540,305" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,4"/>
+  <!-- 混合隔振曲线（实线） -->
+  <path d="M120,250 Q180,240 230,300 Q280,320 340,300 Q400,280 450,290 Q500,300 540,305" fill="none" stroke="#2ecc71" stroke-width="2"/>
+  <!-- 图例 -->
+  <line x1="420" y1="230" x2="450" y2="230" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="455" y="234" font-size="12" fill="#2c3e50">被动隔振</text>
+  <line x1="420" y1="250" x2="450" y2="250" stroke="#2ecc71" stroke-width="2"/>
+  <text x="455" y="254" font-size="12" fill="#2c3e50">混合隔振</text>
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+</svg>
