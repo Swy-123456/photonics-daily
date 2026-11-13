@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
+    </marker>
+  </defs>
+  <rect x="20" y="100" width="100" height="60" rx="8" fill="#e0e0e0" stroke="#555"/>
+  <text x="70" y="135" text-anchor="middle" font-size="14" fill="#333">加工头</text>
+  <line x1="120" y1="130" x2="560" y2="130" stroke="#d32f2f" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="340" y="120" text-anchor="middle" font-size="12" fill="#d32f2f">激光束（主路）</text>
+  <rect x="280" y="140" width="20" height="80" fill="#90caf9" stroke="#1565c0" transform="rotate(45 290 180)"/>
+  <text x="330" y="180" font-size="12" fill="#1565c0">分束镜</text>
+  <line x1="290" y1="180" x2="290" y2="260" stroke="#d32f2f" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="270" y="270" width="40" height="30" fill="#fff9c4" stroke="#f9a825"/>
+  <text x="290" y="290" text-anchor="middle" font-size="11" fill="#f57f17">衰减片</text>
+  <rect x="270" y="310" width="40" height="30" fill="#c8e6c9" stroke="#2e7d32"/>
+  <text x="290" y="330" text-anchor="middle" font-size="11" fill="#2e7d32">传感器</text>
+  <rect x="400" y="250" width="120" height="60" rx="8" fill="#f3e5f5" stroke="#6a1b9a"/>
+  <text x="460" y="275" text-anchor="middle" font-size="12" fill="#6a1b9a">处理单元</text>
+  <text x="460" y="295" text-anchor="middle" font-size="11" fill="#6a1b9a">光束轮廓/M²/功率</text>
+  <line x1="310" y1="325" x2="400" y2="290" stroke="#6a1b9a" stroke-width="2" stroke-dasharray="4"/>
+  <rect x="20" y="20" width="180" height="50" rx="6" fill="#fafafa" stroke="#ccc"/>
+  <text x="30" y="40" font-size="12" fill="#333">图例：</text>
+  <line x1="80" y1="35" x2="120" y2="35" stroke="#d32f2f" stroke-width="4"/>
+  <text x="125" y="40" font-size="12" fill="#333">激光光路</text>
+  <rect x="80" y="48" width="20" height="10" fill="#90caf9" stroke="#1565c0"/>
+  <text x="105" y="57" font-size="12" fill="#333">光学元件</text>
+</svg>
