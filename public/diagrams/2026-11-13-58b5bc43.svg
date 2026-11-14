@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+<defs>
+<linearGradient id="laser" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#ff3b3b"/>
+<stop offset="100%" stop-color="#ff9a3b"/>
+</linearGradient>
+</defs>
+<rect width="640" height="360" fill="#f7f9fc"/>
+<text x="320" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f2d3d">近红外激光选择性解离退役光伏板回收银</text>
+<!-- laser source -->
+<rect x="40" y="60" width="70" height="36" rx="6" fill="#2b3a55"/>
+<text x="75" y="83" text-anchor="middle" font-size="11" fill="#fff">激光器</text>
+<line x1="110" y1="78" x2="250" y2="150" stroke="url(#laser)" stroke-width="4"/>
+<text x="150" y="105" font-size="11" fill="#c0392b">近红外光束</text>
+<!-- layered panel -->
+<g transform="translate(250,140)">
+<rect x="0" y="0" width="330" height="18" fill="#bfe3ff" stroke="#5a8fbf"/>
+<text x="165" y="13" text-anchor="middle" font-size="10" fill="#1f4e79">玻璃</text>
+<rect x="0" y="18" width="330" height="16" fill="#ffe9a8" stroke="#c9a227"/>
+<text x="165" y="30" text-anchor="middle" font-size="10" fill="#7a5c00">EVA 封装胶膜</text>
+<rect x="0" y="34" width="330" height="10" fill="#d9d9d9" stroke="#888"/>
+<text x="165" y="42" text-anchor="middle" font-size="9" fill="#333">银栅线 / 背电极</text>
+<rect x="0" y="44" width="330" height="26" fill="#9fc5e8" stroke="#3d6b9e"/>
+<text x="165" y="61" text-anchor="middle" font-size="10" fill="#12395e">硅片</text>
+<rect x="0" y="70" width="330" height="14" fill="#cfd8dc" stroke="#78909c"/>
+<text x="165" y="81" text-anchor="middle" font-size="9" fill="#37474f">铝背场 / 背板</text>
+<!-- ablation zone -->
+<ellipse cx="120" cy="34" rx="26" ry="9" fill="#ff7043" opacity="0.75"/>
+<text x="120" y="20" text-anchor="middle" font-size="10" fill="#bf360c">界面烧蚀</text>
+<path d="M120 34 q10 -14 26 -10" stroke="#bf360c" stroke-width="2" fill="none"/>
+</g>
+<!-- peeled silver -->
+<path d="M380 150 q40 -30 80 -10 l-6 14 q-40 -14 -70 6 z" fill="#c0c0c0" stroke="#7f8c8d"/>
+<text x="430" y="132" font-size="10" fill="#555">剥离银层</text>
+<!-- arrows to process -->
+<line x1="470" y1="200" x2="520" y2="250" stroke="#2e86c1" stroke-width="2" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#2e86c1"/></marker></defs>
+<rect x="470" y="250" width="130" height="50" rx="8" fill="#e8f6ef" stroke="#27ae60"/>
+<text x="535" y="270" text-anchor="middle" font-size="11" fill="#145a32">分选 + 温和浸出</text>
+<text x="535" y="288" text-anchor="middle" font-size="11" font-weight="bold" fill="#145a32">银选择性 &gt;95%</text>
+<!-- legend -->
+<g transform="translate(40,300)">
+<rect x="0" y="0" width="560" height="44" rx="6" fill="#fff" stroke="#d0d7de"/>
+<line x1="14" y1="16" x2="44" y2="16" stroke="url(#laser)" stroke-width="4"/>
+<text x="50" y="20" font-size="10" fill="#333">激光路径</text>
+<ellipse cx="140" cy="16" rx="12" ry="6" fill="#ff7043" opacity="0.75"/>
+<text x="158" y="20" font-size="10" fill="#333">热影响界面</text>
+<rect x="250" y="10" width="18" height="10" fill="#c0c0c0" stroke="#7f8c8d"/>
+<text x="274" y="20" font-size="10" fill="#333">剥离银层</text>
+<rect x="360" y="10" width="18" height="10" fill="#9fc5e8" stroke="#3d6b9e"/>
+<text x="384" y="20" font-size="10" fill="#333">可保留硅片</text>
+<text x="470" y="20" font-size="10" fill="#333">→ 梯级利用</text>
+</g>
+</svg>
