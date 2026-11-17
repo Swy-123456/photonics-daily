@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#f8f9fa"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#222">光子「边传边算」架构示意</text>
+  <!-- 光源 -->
+  <rect x="30" y="70" width="80" height="50" rx="8" fill="#4a90d9" opacity="0.85"/>
+  <text x="70" y="92" text-anchor="middle" font-size="12" fill="#fff">多波长</text>
+  <text x="70" y="108" text-anchor="middle" font-size="12" fill="#fff">光源</text>
+  <!-- 波分解复用 -->
+  <rect x="150" y="70" width="90" height="50" rx="8" fill="#50b86c" opacity="0.85"/>
+  <text x="195" y="92" text-anchor="middle" font-size="12" fill="#fff">波分</text>
+  <text x="195" y="108" text-anchor="middle" font-size="12" fill="#fff">解复用</text>
+  <!-- MZI阵列 -->
+  <rect x="280" y="55" width="110" height="80" rx="8" fill="#e8a838" opacity="0.85"/>
+  <text x="335" y="82" text-anchor="middle" font-size="12" fill="#fff">MZI干涉</text>
+  <text x="335" y="98" text-anchor="middle" font-size="12" fill="#fff">阵列</text>
+  <text x="335" y="114" text-anchor="middle" font-size="11" fill="#fff">（矩阵乘法）</text>
+  <!-- 微环 -->
+  <rect x="430" y="55" width="90" height="80" rx="8" fill="#c05a9e" opacity="0.85"/>
+  <text x="475" y="82" text-anchor="middle" font-size="12" fill="#fff">微环谐振</text>
+  <text x="475" y="98" text-anchor="middle" font-size="12" fill="#fff">加权</text>
+  <text x="475" y="114" text-anchor="middle" font-size="11" fill="#fff">（逐元素乘）</text>
+  <!-- 探测器 -->
+  <rect x="550" y="70" width="70" height="50" rx="8" fill="#d9534f" opacity="0.85"/>
+  <text x="585" y="92" text-anchor="middle" font-size="12" fill="#fff">光电</text>
+  <text x="585" y="108" text-anchor="middle" font-size="12" fill="#fff">探测</text>
+  <!-- 箭头连线 -->
+  <line x1="110" y1="95" x2="145" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="240" y1="95" x2="275" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="390" y1="95" x2="425" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="520" y1="95" x2="545" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 数据流标注 -->
+  <text x="320" y="165" text-anchor="middle" font-size="13" fill="#555">光信号传播方向 → 计算在传输中完成</text>
+  <!-- 图例 -->
+  <rect x="40" y="200" width="560" height="130" rx="8" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="60" y="225" font-size="13" font-weight="bold" fill="#333">图例</text>
+  <rect x="60" y="240" width="16" height="16" fill="#4a90d9"/>
+  <text x="84" y="253" font-size="12" fill="#333">光源输入</text>
+  <rect x="180" y="240" width="16" height="16" fill="#50b86c"/>
+  <text x="204" y="253" font-size="12" fill="#333">波长路由</text>
+  <rect x="300" y="240" width="16" height="16" fill="#e8a838"/>
+  <text x="324" y="253" font-size="12" fill="#333">干涉计算</text>
+  <rect x="420" y="240" width="16" height="16" fill="#c05a9e"/>
+  <text x="444" y="253" font-size="12" fill="#333">谐振加权</text>
+  <rect x="60" y="275" width="16" height="16" fill="#d9534f"/>
+  <text x="84" y="288" font-size="12" fill="#333">光电转换输出</text>
+  <line x1="180" y1="283" x2="240" y2="283" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="250" y="288" font-size="12" fill="#333">数据流方向</text>
+</svg>
