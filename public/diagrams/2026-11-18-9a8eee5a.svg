@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" fill="#fafafa"/>
+  <text x="320" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#222">端到端纳米压印光刻工艺流程</text>
+  <!-- Step 1 -->
+  <rect x="30" y="60" width="120" height="80" rx="8" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="90" y="90" text-anchor="middle" font-size="12" fill="#1e3a8a">① 母版制作</text>
+  <text x="90" y="110" text-anchor="middle" font-size="10" fill="#1e3a8a">电子束光刻</text>
+  <path d="M90,140 L90,160" stroke="#555" marker-end="url(#arrow)"/>
+  <!-- Step 2 -->
+  <rect x="30" y="165" width="120" height="80" rx="8" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="90" y="195" text-anchor="middle" font-size="12" fill="#14532d">② 涂胶压印</text>
+  <text x="90" y="215" text-anchor="middle" font-size="10" fill="#14532d">填充凹槽</text>
+  <path d="M150,205 L180,205" stroke="#555" marker-end="url(#arrow)"/>
+  <!-- Step 3 -->
+  <rect x="185" y="165" width="120" height="80" rx="8" fill="#fef9c3" stroke="#eab308"/>
+  <text x="245" y="195" text-anchor="middle" font-size="12" fill="#713f12">③ 紫外固化</text>
+  <text x="245" y="215" text-anchor="middle" font-size="10" fill="#713f12">交联定型</text>
+  <path d="M305,205 L335,205" stroke="#555" marker-end="url(#arrow)"/>
+  <!-- Step 4 -->
+  <rect x="340" y="165" width="120" height="80" rx="8" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="400" y="195" text-anchor="middle" font-size="12" fill="#831843">④ 脱模</text>
+  <text x="400" y="215" text-anchor="middle" font-size="10" fill="#831843">图形转移</text>
+  <path d="M460,205 L490,205" stroke="#555" marker-end="url(#arrow)"/>
+  <!-- Step 5 -->
+  <rect x="495" y="165" width="120" height="80" rx="8" fill="#ede9fe" stroke="#8b5cf6"/>
+  <text x="555" y="195" text-anchor="middle" font-size="12" fill="#4c1d95">⑤ 刻蚀转移</text>
+  <text x="555" y="215" text-anchor="middle" font-size="10" fill="#4c1d95">反应离子刻蚀</text>
+  <!-- Step 6 below -->
+  <rect x="340" y="280" width="120" height="60" rx="8" fill="#fee2e2" stroke="#ef4444"/>
+  <text x="400" y="308" text-anchor="middle" font-size="12" fill="#7f1d1d">⑥ 器件测试</text>
+  <text x="400" y="326" text-anchor="middle" font-size="10" fill="#7f1d1d">光谱与插损</text>
+  <path d="M555,245 L555,270 L460,270" stroke="#555" fill="none" marker-end="url(#arrow)"/>
+  <!-- annotations -->
+  <text x="30" y="300" font-size="11" fill="#333">关键参数：残余层厚度 t_r、套刻误差 Δx</text>
+  <rect x="30" y="310" width="14" height="14" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="50" y="322" font-size="10" fill="#333">母版/压印</text>
+  <rect x="130" y="310" width="14" height="14" fill="#fef9c3" stroke="#eab308"/>
+  <text x="150" y="322" font-size="10" fill="#333">固化</text>
+  <rect x="200" y="310" width="14" height="14" fill="#ede9fe" stroke="#8b5cf6"/>
+  <text x="220" y="322" font-size="10" fill="#333">刻蚀</text>
+</svg>
