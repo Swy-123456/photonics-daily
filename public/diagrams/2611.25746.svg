@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#d62728"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#1f77b4"/>
+    </marker>
+  </defs>
+  <!-- 背景 -->
+  <rect x="0" y="0" width="640" height="360" fill="#fafafa"/>
+  <!-- 空气层 -->
+  <rect x="80" y="60" width="400" height="50" fill="#e6f2ff" stroke="#999"/>
+  <text x="90" y="90" font-size="14" fill="#333">空气 (n₀)</text>
+  <!-- 薄膜层 -->
+  <rect x="80" y="110" width="400" height="100" fill="#ffe6cc" stroke="#999"/>
+  <text x="90" y="145" font-size="14" fill="#333">Ta₂O₅ 薄膜 (n₁, d)</text>
+  <!-- 基底 -->
+  <rect x="80" y="210" width="400" height="80" fill="#d9d9d9" stroke="#999"/>
+  <text x="90" y="255" font-size="14" fill="#333">玻璃基底 (n₂)</text>
+  <!-- 界面标注 -->
+  <text x="500" y="85" font-size="12" fill="#333">表面</text>
+  <text x="500" y="165" font-size="12" fill="#333">体层</text>
+  <text x="500" y="225" font-size="12" fill="#333">埋入界面</text>
+  <!-- 入射光 -->
+  <line x1="20" y1="40" x2="120" y2="110" stroke="#d62728" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="20" y="30" font-size="14" fill="#d62728">基频光 ω</text>
+  <text x="110" y="75" font-size="12" fill="#d62728">θ</text>
+  <!-- 多次反射示意 -->
+  <line x1="120" y1="110" x2="400" y2="210" stroke="#d62728" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRed)"/>
+  <line x1="400" y1="210" x2="120" y2="110" stroke="#d62728" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRed)"/>
+  <line x1="120" y1="110" x2="400" y2="110" stroke="#d62728" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="250" y="130" font-size="12" fill="#d62728">多次反射/干涉</text>
+  <!-- SHG 源 -->
+  <circle cx="200" cy="110" r="6" fill="#2ca02c"/>
+  <circle cx="280" cy="160" r="6" fill="#ff7f0e"/>
+  <circle cx="360" cy="210" r="6" fill="#9467bd"/>
+  <text x="200" y="100" font-size="11" fill="#2ca02c" text-anchor="middle">χ⁽²⁾_surf</text>
+  <text x="280" y="150" font-size="11" fill="#ff7f0e" text-anchor="middle">χ⁽²⁾_bulk</text>
+  <text x="360" y="200" font-size="11" fill="#9467bd" text-anchor="middle">χ⁽²⁾_buried</text>
+  <!-- 二次谐波出射 -->
+  <line x1="200" y1="110" x2="560" y2="50" stroke="#1f77b4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="280" y1="160" x2="560" y2="50" stroke="#1f77b4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="360" y1="210" x2="560" y2="50" stroke="#1f77b4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="540" y="40" font-size="14" fill="#1f77b4">二次谐波 2ω</text>
+  <!-- 探测器 -->
+  <rect x="560" y="30" width="60" height="40" fill="#1f77b4" opacity="0.3" stroke="#1f77b4"/>
+  <text x="565" y="55" font-size="12" fill="#1f77b4">探测器</text>
+  <!-- 图例 -->
+  <rect x="20" y="300" width="600" height="50" fill="#fff" stroke="#ccc"/>
+  <circle cx="40" cy="320" r="5" fill="#2ca02c"/><text x="50" y="325" font-size="12">表面贡献</text>
+  <circle cx="140" cy="320" r="5" fill="#ff7f0e"/><text x="150" y="325" font-size="12">体层贡献</text>
+  <circle cx="240" cy="320" r="5" fill="#9467bd"/><text x="250" y="325" font-size="12">埋入界面贡献</text>
+  <line x1="360" y1="320" x2="390" y2="320" stroke="#d62728" stroke-width="2"/><text x="395" y="325" font-size="12">基频光</text>
+  <line x1="460" y1="320" x2="490" y2="320" stroke="#1f77b4" stroke-width="2"/><text x="495" y="325" font-size="12">二次谐波</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- 背景 -->
+  <rect width="640" height="360" fill="#f9f9f9" stroke="#ccc" stroke-width="1"/>
+  <!-- 光源与场景 -->
+  <rect x="30" y="140" width="60" height="60" fill="#ffe082" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="60" y="175" text-anchor="middle" font-size="12" fill="#333">光源</text>
+  <rect x="120" y="130" width="70" height="80" fill="#b3e5fc" stroke="#0288d1" stroke-width="2" rx="5"/>
+  <text x="155" y="175" text-anchor="middle" font-size="12" fill="#333">场景</text>
+  <!-- 调制器 -->
+  <rect x="230" y="120" width="80" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="270" y="165" text-anchor="middle" font-size="12" fill="#333">空间光</text>
+  <text x="270" y="185" text-anchor="middle" font-size="12" fill="#333">调制器</text>
+  <!-- 探测器 -->
+  <rect x="360" y="140" width="60" height="60" fill="#ffccbc" stroke="#e64a19" stroke-width="2" rx="5"/>
+  <text x="390" y="175" text-anchor="middle" font-size="12" fill="#333">单点</text>
+  <text x="390" y="190" text-anchor="middle" font-size="12" fill="#333">探测器</text>
+  <!-- 时间混合矩阵H -->
+  <rect x="460" y="130" width="60" height="80" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="490" y="165" text-anchor="middle" font-size="12" fill="#333">H</text>
+  <text x="490" y="185" text-anchor="middle" font-size="10" fill="#333">时间混合</text>
+  <!-- 复合矩阵C -->
+  <rect x="550" y="140" width="60" height="60" fill="#fff9c4" stroke="#fbc02d" stroke-width="2" rx="5"/>
+  <text x="580" y="170" text-anchor="middle" font-size="12" fill="#333">C=H·A</text>
+  <text x="580" y="185" text-anchor="middle" font-size="10" fill="#333">复合测量</text>
+  <!-- 箭头 -->
+  <line x1="90" y1="170" x2="118" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="190" y1="170" x2="228" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="310" y1="170" x2="358" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="420" y1="170" x2="458" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="520" y1="170" x2="548" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 重建模块 -->
+  <rect x="540" y="250" width="80" height="50" fill="#d1c4e9" stroke="#512da8" stroke-width="2" rx="5"/>
+  <text x="580" y="275" text-anchor="middle" font-size="12" fill="#333">重建算法</text>
+  <line x1="580" y1="200" x2="580" y2="248" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 校准模块 -->
+  <rect x="440" y="250" width="70" height="50" fill="#b2dfdb" stroke="#00695c" stroke-width="2" rx="5"/>
+  <text x="475" y="275" text-anchor="middle" font-size="12" fill="#333">校准</text>
+  <line x1="475" y1="210" x2="475" y2="248" stroke="#333" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  <!-- 图例 -->
+  <rect x="30" y="290" width="12" height="12" fill="#ffe082" stroke="#f9a825"/>
+  <text x="48" y="300" font-size="10" fill="#333">光源/场景</text>
+  <rect x="130" y="290" width="12" height="12" fill="#c8e6c9" stroke="#388e3c"/>
+  <text x="148" y="300" font-size="10" fill="#333">调制器</text>
+  <rect x="220" y="290" width="12" height="12" fill="#ffccbc" stroke="#e64a19"/>
+  <text x="238" y="300" font-size="10" fill="#333">探测器</text>
+  <rect x="310" y="290" width="12" height="12" fill="#e1bee7" stroke="#7b1fa2"/>
+  <text x="328" y="300" font-size="10" fill="#333">时间混合</text>
+  <rect x="410" y="290" width="12" height="12" fill="#fff9c4" stroke="#fbc02d"/>
+  <text x="428" y="300" font-size="10" fill="#333">复合矩阵</text>
+  <rect x="510" y="290" width="12" height="12" fill="#d1c4e9" stroke="#512da8"/>
+  <text x="528" y="300" font-size="10" fill="#333">重建</text>
+  <rect x="580" y="290" width="12" height="12" fill="#b2dfdb" stroke="#00695c"/>
+  <text x="598" y="300" font-size="10" fill="#333">校准</text>
+</svg>

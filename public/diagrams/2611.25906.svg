@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- 背景 -->
+  <rect width="640" height="360" fill="#f9f9f9" stroke="#ccc" stroke-width="1"/>
+  <!-- 左侧：颗粒系统 -->
+  <rect x="30" y="80" width="120" height="200" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="90" y="70" text-anchor="middle" font-size="14" fill="#1976d2">颗粒系统</text>
+  <!-- 颗粒圆圈 -->
+  <circle cx="60" cy="120" r="12" fill="#ffb74d" stroke="#e65100" stroke-width="1.5"/>
+  <circle cx="100" cy="140" r="12" fill="#81c784" stroke="#2e7d32" stroke-width="1.5"/>
+  <circle cx="70" cy="180" r="12" fill="#64b5f6" stroke="#1565c0" stroke-width="1.5"/>
+  <circle cx="110" cy="210" r="12" fill="#e57373" stroke="#c62828" stroke-width="1.5"/>
+  <circle cx="80" cy="250" r="12" fill="#ba68c8" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="90" y="300" text-anchor="middle" font-size="11" fill="#555">材料库分配</text>
+  <!-- 箭头1 -->
+  <line x1="150" y1="180" x2="210" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 中间：TMM分解 -->
+  <rect x="220" y="60" width="200" height="240" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="320" y="50" text-anchor="middle" font-size="14" fill="#f57c00">TMM矩阵分解</text>
+  <!-- 矩阵D -->
+  <rect x="240" y="90" width="70" height="70" rx="5" fill="#ffcc80" stroke="#e65100" stroke-width="1.5"/>
+  <text x="275" y="130" text-anchor="middle" font-size="12" fill="#e65100">D(m)</text>
+  <text x="275" y="145" text-anchor="middle" font-size="10" fill="#e65100">材料相关</text>
+  <!-- 加号 -->
+  <text x="325" y="130" text-anchor="middle" font-size="20" fill="#333">+</text>
+  <!-- 矩阵C -->
+  <rect x="340" y="90" width="70" height="70" rx="5" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="375" y="130" text-anchor="middle" font-size="12" fill="#2e7d32">C</text>
+  <text x="375" y="145" text-anchor="middle" font-size="10" fill="#2e7d32">材料无关</text>
+  <!-- 子问题框 -->
+  <rect x="240" y="190" width="170" height="80" rx="5" fill="#e8eaf6" stroke="#3f51b5" stroke-width="1.5"/>
+  <text x="325" y="215" text-anchor="middle" font-size="12" fill="#3f51b5">子问题：min f(m_i)</text>
+  <text x="325" y="235" text-anchor="middle" font-size="11" fill="#3f51b5">全局最小化</text>
+  <text x="325" y="255" text-anchor="middle" font-size="11" fill="#3f51b5">（非凸）</text>
+  <!-- 箭头2 -->
+  <line x1="420" y1="180" x2="480" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- 右侧：优化输出 -->
+  <rect x="490" y="80" width="120" height="200" rx="10" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
+  <text x="550" y="70" text-anchor="middle" font-size="14" fill="#c2185b">优化设计</text>
+  <!-- 优化后颗粒 -->
+  <circle cx="520" cy="120" r="12" fill="#ffb74d" stroke="#e65100" stroke-width="1.5"/>
+  <circle cx="560" cy="140" r="12" fill="#81c784" stroke="#2e7d32" stroke-width="1.5"/>
+  <circle cx="530" cy="180" r="12" fill="#64b5f6" stroke="#1565c0" stroke-width="1.5"/>
+  <circle cx="570" cy="210" r="12" fill="#e57373" stroke="#c62828" stroke-width="1.5"/>
+  <circle cx="540" cy="250" r="12" fill="#ba68c8" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="550" y="300" text-anchor="middle" font-size="11" fill="#555">目标：消光/色度</text>
+  <!-- 迭代循环箭头 -->
+  <path d="M 420 280 Q 320 330 220 280" fill="none" stroke="#3f51b5" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="320" y="330" text-anchor="middle" font-size="11" fill="#3f51b5">迭代更新</text>
+  <!-- 图例 -->
+  <rect x="30" y="20" width="580" height="20" fill="none"/>
+  <circle cx="50" cy="30" r="6" fill="#ffb74d" stroke="#e65100"/>
+  <text x="60" y="34" font-size="11" fill="#333">材料A</text>
+  <circle cx="120" cy="30" r="6" fill="#81c784" stroke="#2e7d32"/>
+  <text x="130" y="34" font-size="11" fill="#333">材料B</text>
+  <circle cx="190" cy="30" r="6" fill="#64b5f6" stroke="#1565c0"/>
+  <text x="200" y="34" font-size="11" fill="#333">材料C</text>
+  <circle cx="260" cy="30" r="6" fill="#e57373" stroke="#c62828"/>
+  <text x="270" y="34" font-size="11" fill="#333">材料D</text>
+  <circle cx="330" cy="30" r="6" fill="#ba68c8" stroke="#6a1b9a"/>
+  <text x="340" y="34" font-size="11" fill="#333">材料E</text>
+  <rect x="410" y="24" width="12" height="12" fill="#ffcc80" stroke="#e65100"/>
+  <text x="428" y="34" font-size="11" fill="#333">D(m)</text>
+  <rect x="480" y="24" width="12" height="12" fill="#a5d6a7" stroke="#2e7d32"/>
+  <text x="498" y="34" font-size="11" fill="#333">C</text>
+</svg>

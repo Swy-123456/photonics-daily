@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f8f9fa"/>
+  <!-- Left: Rectangular lattice -->
+  <text x="160" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a2e">矩形晶格：BIC合并</text>
+  <g transform="translate(40,50)">
+    <rect x="0" y="0" width="240" height="120" fill="#e9ecef" stroke="#495057" stroke-width="1.5" rx="6"/>
+    <!-- lattice dots -->
+    <circle cx="40" cy="40" r="4" fill="#0d6efd"/>
+    <circle cx="120" cy="40" r="4" fill="#0d6efd"/>
+    <circle cx="200" cy="40" r="4" fill="#0d6efd"/>
+    <circle cx="40" cy="80" r="4" fill="#0d6efd"/>
+    <circle cx="120" cy="80" r="4" fill="#0d6efd"/>
+    <circle cx="200" cy="80" r="4" fill="#0d6efd"/>
+    <!-- BIC symbols -->
+    <text x="120" y="105" text-anchor="middle" font-size="11" fill="#dc3545">FW-BIC + FW-BIC + SP-BIC 合并</text>
+  </g>
+  <!-- Q scaling plot -->
+  <g transform="translate(40,190)">
+    <rect x="0" y="0" width="240" height="140" fill="#ffffff" stroke="#adb5bd" stroke-width="1" rx="4"/>
+    <text x="120" y="20" text-anchor="middle" font-size="11" fill="#495057">Q ~ k⁻⁶</text>
+    <polyline points="20,120 60,40 100,20 140,15 180,13 220,12" fill="none" stroke="#0d6efd" stroke-width="2"/>
+    <line x1="20" y1="120" x2="220" y2="120" stroke="#495057" stroke-width="1"/>
+    <line x1="20" y1="120" x2="20" y2="20" stroke="#495057" stroke-width="1"/>
+    <text x="120" y="135" text-anchor="middle" font-size="10" fill="#6c757d">波矢 k</text>
+  </g>
+  <!-- Right: Oblique lattice -->
+  <text x="480" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a2e">斜晶格：准BIC与平带</text>
+  <g transform="translate(360,50)">
+    <rect x="0" y="0" width="240" height="120" fill="#e9ecef" stroke="#495057" stroke-width="1.5" rx="6"/>
+    <!-- oblique lattice dots -->
+    <circle cx="40" cy="40" r="4" fill="#6f42c1"/>
+    <circle cx="120" cy="55" r="4" fill="#6f42c1"/>
+    <circle cx="200" cy="70" r="4" fill="#6f42c1"/>
+    <circle cx="50" cy="85" r="4" fill="#6f42c1"/>
+    <circle cx="130" cy="100" r="4" fill="#6f42c1"/>
+    <circle cx="210" cy="115" r="4" fill="#6f42c1"/>
+    <text x="120" y="105" text-anchor="middle" font-size="11" fill="#dc3545">FW-BIC → 准BIC</text>
+  </g>
+  <!-- Q scaling plot oblique -->
+  <g transform="translate(360,190)">
+    <rect x="0" y="0" width="240" height="140" fill="#ffffff" stroke="#adb5bd" stroke-width="1" rx="4"/>
+    <text x="120" y="20" text-anchor="middle" font-size="11" fill="#495057">Q ~ (90°-θ)⁻²</text>
+    <polyline points="20,120 60,80 100,50 140,30 180,20 220,15" fill="none" stroke="#6f42c1" stroke-width="2"/>
+    <line x1="20" y1="120" x2="220" y2="120" stroke="#495057" stroke-width="1"/>
+    <line x1="20" y1="120" x2="20" y2="20" stroke="#495057" stroke-width="1"/>
+    <text x="120" y="135" text-anchor="middle" font-size="10" fill="#6c757d">角度偏差 θ</text>
+  </g>
+  <!-- Flatband illustration -->
+  <g transform="translate(160,330)">
+    <text x="0" y="0" text-anchor="middle" font-size="11" fill="#198754">平带：能带平坦，与BIC合并独立</text>
+    <line x1="-100" y1="10" x2="100" y2="10" stroke="#198754" stroke-width="2" stroke-dasharray="4,2"/>
+  </g>
+  <!-- Legend -->
+  <g transform="translate(480,330)">
+    <circle cx="0" cy="0" r="4" fill="#0d6efd"/>
+    <text x="10" y="4" font-size="10" fill="#495057">矩形晶格</text>
+    <circle cx="80" cy="0" r="4" fill="#6f42c1"/>
+    <text x="90" y="4" font-size="10" fill="#495057">斜晶格</text>
+  </g>
+</svg>
