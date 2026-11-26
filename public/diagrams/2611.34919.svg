@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="sans-serif">
+  <rect width="640" height="360" fill="#f8f9fa"/>
+  <text x="320" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">电压增强光折变迟滞机制</text>
+  <!-- 左侧：光子晶体腔结构 -->
+  <g transform="translate(20,50)">
+    <rect x="0" y="0" width="180" height="120" fill="#e9ecef" stroke="#495057" stroke-width="1.5" rx="5"/>
+    <text x="90" y="18" text-anchor="middle" font-size="12" fill="#495057">光子晶体腔</text>
+    <!-- 孔洞阵列 -->
+    <circle cx="30" cy="50" r="8" fill="#adb5bd"/>
+    <circle cx="60" cy="50" r="8" fill="#adb5bd"/>
+    <circle cx="90" cy="50" r="8" fill="#adb5bd"/>
+    <circle cx="120" cy="50" r="8" fill="#adb5bd"/>
+    <circle cx="150" cy="50" r="8" fill="#adb5bd"/>
+    <circle cx="30" cy="85" r="8" fill="#adb5bd"/>
+    <circle cx="60" cy="85" r="8" fill="#adb5bd"/>
+    <circle cx="120" cy="85" r="8" fill="#adb5bd"/>
+    <circle cx="150" cy="85" r="8" fill="#adb5bd"/>
+    <!-- 缺陷区（中心） -->
+    <rect x="80" y="70" width="20" height="20" fill="#ffd43b" stroke="#f08c00" stroke-width="1.5"/>
+    <text x="90" y="84" text-anchor="middle" font-size="9" fill="#e67700">光场</text>
+  </g>
+  <!-- 中间：扫描方向箭头 -->
+  <g transform="translate(220,80)">
+    <defs>
+      <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#e03131"/>
+      </marker>
+      <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#1c7ed6"/>
+      </marker>
+    </defs>
+    <line x1="0" y1="20" x2="80" y2="20" stroke="#e03131" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+    <text x="40" y="12" text-anchor="middle" font-size="11" fill="#e03131">正向扫描</text>
+    <line x1="80" y1="50" x2="0" y2="50" stroke="#1c7ed6" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+    <text x="40" y="68" text-anchor="middle" font-size="11" fill="#1c7ed6">反向扫描</text>
+  </g>
+  <!-- 右侧：迟滞曲线 -->
+  <g transform="translate(340,50)">
+    <rect x="0" y="0" width="280" height="240" fill="#ffffff" stroke="#495057" stroke-width="1.5" rx="5"/>
+    <text x="140" y="18" text-anchor="middle" font-size="12" fill="#495057">谐振波长 vs. 扫描时间</text>
+    <!-- 坐标轴 -->
+    <line x1="40" y1="200" x2="260" y2="200" stroke="#343a40" stroke-width="1.5"/>
+    <line x1="40" y1="30" x2="40" y2="200" stroke="#343a40" stroke-width="1.5"/>
+    <text x="150" y="225" text-anchor="middle" font-size="10" fill="#343a40">时间</text>
+    <text x="15" y="115" text-anchor="middle" font-size="10" fill="#343a40" transform="rotate(-90,15,115)">波长</text>
+    <!-- 迟滞回线：正向（红）和反向（蓝） -->
+    <path d="M 60 180 Q 100 160 140 120 Q 180 80 220 70" fill="none" stroke="#e03131" stroke-width="2.5"/>
+    <path d="M 220 70 Q 180 90 140 130 Q 100 170 60 180" fill="none" stroke="#1c7ed6" stroke-width="2.5" stroke-dasharray="6,3"/>
+    <!-- 迟滞间隙标注 -->
+    <line x1="140" y1="120" x2="140" y2="130" stroke="#2b8a3e" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="150" y="128" font-size="10" fill="#2b8a3e">Δλ_hys</text>
+  </g>
+  <!-- 底部图例 -->
+  <g transform="translate(20,300)">
+    <rect x="0" y="0" width="600" height="45" fill="#ffffff" stroke="#ced4da" stroke-width="1" rx="5"/>
+    <line x1="15" y1="22" x2="45" y2="22" stroke="#e03131" stroke-width="2.5"/>
+    <text x="50" y="26" font-size="11" fill="#e03131">正向扫描（波长增加）</text>
+    <line x1="200" y1="22" x2="230" y2="22" stroke="#1c7ed6" stroke-width="2.5" stroke-dasharray="6,3"/>
+    <text x="235" y="26" font-size="11" fill="#1c7ed6">反向扫描（波长减少）</text>
+    <rect x="400" y="14" width="16" height="16" fill="#ffd43b" stroke="#f08c00" stroke-width="1"/>
+    <text x="420" y="26" font-size="11" fill="#e67700">光场局域区</text>
+    <text x="520" y="26" font-size="11" fill="#2b8a3e">Δλ_hys ∝ V_b · P</text>
+  </g>
+</svg>
